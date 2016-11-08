@@ -1,9 +1,20 @@
 # Styleguide
 Style guide for UK Parliament
 
+## Dependencies
+* Ruby 2.3.1
+* Rails 5.0.0.1
+
 ## Installation
 
-Execute:
+### Using git submodules
+
+Update the Pugin engine to the latest version you can use
+```bash
+$ git submodule update
+```
+
+Once the pugin engine is updated, execute:
 ```bash
 $ bundle install
 ```
