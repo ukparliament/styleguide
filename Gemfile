@@ -34,6 +34,9 @@ gem 'slim-rails'
 # Prism, for sytax highlighting
 gem 'prism-rails'
 
+# Engine for static pages
+gem 'high_voltage'
+
 # Font Awesome, for CSS icon sets
 gem 'font-awesome-sass'
 
