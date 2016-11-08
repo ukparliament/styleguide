@@ -1,0 +1,3 @@
+[submodule "pugin"]
+	path = pugin
+	url = https://github.com/huntpb/pugin.git
