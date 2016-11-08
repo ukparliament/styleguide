@@ -6,11 +6,11 @@ config/secrets.yml
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
-# Logs
-/log
-
-# Temp files
-/tmp
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
 
 ## Environment normalisation:
 /.bundle
