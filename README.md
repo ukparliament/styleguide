@@ -11,6 +11,10 @@ Style guide for UK Parliament
 
 Update the Pugin engine to the latest version you can use
 ```bash
+$ git submodule init
+```
+
+```bash
 $ git submodule update
 ```
 
