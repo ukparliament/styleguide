@@ -1,150 +1,27 @@
 - content_for :title do
-  | Pugin
-
-div.pugin-page-wrap
-
-  div.container
-    div.row.pugin-component-head
-      div.col-6
-        h3
-         | Members Card
-      div.col-6
-        p.pugin-component-head-github
-          i.fa.fa-github aria-hidden="true"
-          a[href="#" title=""]
-           | Last commit
-          |  on 31st October
-
-  div.container
-    div.row
-      div.col-7
-        h4
-         | Example
-        div.pugin-component-example
-
-          /! Members Card Template - HoC - Philip Hammond
-
-          /! Members Block : Breadcrumbs
-          div.pds-cont-wrap
-
-            div.pds-cont-row
-              div
-                p
-                  a[href="#" title=""]
-                    | Breadcrumb 1
-                  span.pds-crumb-spacer
-                    |  /
-                  a[href="#" title=""]
-                    | Breadcrumb 2
-
-          /! Members Block : Profile Headline
-          div.pds-cont-wrap
-            div.pds-cont-row
-              div
-                div
-                  img[alt="Member Photo" src== image_path('member.jpg') width="116px" height="175px"]
-                div
-                  h2
-                    | Member Name
-                  div
-                    p
-                      a[href="#" title=""]
-                        | Member Role Or Status
-
-          /! Members Block : Constituency
-          div.pds-cont-wrap
-            div.pds-cont-row
-              div
-                h3
-                  | Constituency
-                p
-                  a[href="#" title=""]
-                    | Constituency Location
-
-          /! Members Block : Party
-          div.pds-cont-wrap
-            div.pds-cont-row
-              div
-                h3
-                  | Party
-                p
-                  a[href="#" title=""]
-                    | Party Name
-
-          /! Members Block : Contact Details
-          div.pds-cont-wrap
-            div.pds-cont-row
-              div
-                h3
-                  | Contact
-                p
-                  a[href="#" title=""]
-                    | How can my MP help me?
-
-              /! Members Sub-Block : Contact Details Sub
-              div
-                h4
-                  | Contact Details Type
-                dl
-                  dt
-                    | Address:
-                  dd
-                    | Address Line Text
-                  dt
-                    | Tel:
-                  dd
-                    a[href="tel:#" title=""]
-                      | Telephone Number
-                  dt
-                    | Email:
-                  dd
-                    a[href="mailto:#" title=""]
-                      | Email Address
+  | Page title
 
 
-              /! Members Sub-Block : Website & Social Network Details
-              div
-                h4
-                  | Website and Social
-                dl
-                  dt
-                    | Website:
-                  dd
-                    span.pds-members-social-website
-                     i.fa.fa-globe aria-hidden="true"
-                     a[href="#" title=""]
-                       | Website Address
-                  dt
-                    | Twitter:
-                  dd
-                    span.pds-members-social-twitter
-                     i.fa.fa-twitter aria-hidden="true"
-                     a[href="" title=""]
-                       | Twitter Handle
-
-      div.col-5
-        h4
-         | HTML Markup
-        div.pugin-component-markup
-
-        h4
-         | CSS Styling Options
-        div.pugin-component-style
-          table
-            tr
-              th
-                | Class Name
-              th
-                | Usage
-            tr
-              td
-                | Test
-              td
-                | Test
+- content_for :pageheading do
+  | Page heading
 
 
-        h4
-         | Notes
-        div.pugin-component-info
-          p
-           | This pattern contains a member’s basic info and contact details. The same pattern can be used for Lords and MPs but will have different content types.
+- content_for :preview do
+  = render 'layouts/pugin/modules/header.html.slim'
+
+
+- content_for :markup do
+  pre
+    code.language-markup
+      script
+        = render 'layouts/pugin/modules/header.html.slim'
+
+
+- content_for :cssusage do
+  table
+      tr
+        td
+          | example table
+
+- content_for :notes do
+  p example notes

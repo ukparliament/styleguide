@@ -1,0 +1,55 @@
+doctype html
+html lang="en"
+  head
+    meta charset="UTF-8"
+    meta content="width=device-width, initial-scale=1.0" name="viewport"
+    meta content="ie=edge" http-equiv="X-UA-Compatible"
+    title = content_for?(:title) ? yield(:title) : "Uk Parliament Style guide"
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = csrf_meta_tags
+
+  body
+    div.pugin-page-wrap
+
+      div.container
+        div.row.pugin-component-head
+          div.col-6
+            h3
+             = content_for?(:pageheading) ? yield(:pageheading) : ""
+          div.col-6
+            p.pugin-component-head-github
+              i.fa.fa-github aria-hidden="true"
+              a[href="#" title=""]
+               | Last commit
+              |  on 31st October
+
+      div.container
+        div.row
+          div.col-7
+            h4
+             | Example
+            div.pugin-component-example
+              = content_for?(:preview) ? yield(:preview) : ""
+
+          div.col-5
+            h4
+             | HTML Markup
+            div.pugin-component-markup
+              = content_for?(:markup) ? yield(:markup) : ""
+
+            h4
+             | CSS Styling Options
+            div.pugin-component-style
+              = content_for?(:cssusage) ? yield(:cssusage) : ""
+
+
+            h4
+             | Notes
+            div.pugin-component-info
+              = content_for?(:notes) ? yield(:notes) : ""
+
+
+    = yield
+
+    = "\n"
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'

@@ -1,0 +1,93 @@
+/* Exclusive Styles for Pugin Style Guide */
+
+.pugin-page-wrap {
+  width: 100%;
+  background-color: $grey10;
+}
+
+.pugin-page-wrap:after {
+  clear: both;
+  display: block;
+  content: "";
+}
+
+/* Header */
+
+.pugin-header-wrap {
+  width: 100%;
+  min-width: $min-width;
+  background-color: $white;
+  border-bottom: solid 3px $grey20;
+}
+
+.pugin-header-row {
+  padding: $base-spacing-unit-small;
+}
+
+.pugin-header-wrap:after,
+.pugin-header-row:after {
+  clear: both;
+  display: block;
+  content: "";
+}
+
+.pugin-header-title {
+  float: left;
+  width: 50%;
+}
+
+.pugin-header-desc {
+  float: right;
+  width: 49%;
+  text-align: right;
+  padding: $base-spacing-unit-small 0 0 0;
+}
+
+/* Main Content */
+
+i {
+  margin: 0 $base-spacing-unit-tiny 0 0;
+}
+
+.pugin-component-head {
+  border-bottom: solid 1px $black;
+}
+
+.pugin-component-head-github {
+  padding: 1.2em 0 0 0;
+  text-align: right;
+}
+
+.pugin-component-example {
+  padding: 0 $base-spacing-unit-small;
+  background-color: $white;
+  border: solid 1px $grey20;
+}
+
+.pugin-component-markup {
+  height: 200px;
+  padding: $base-spacing-unit-tiny;
+  background-color: $white;
+  border: solid 1px $grey20;
+  overflow-x: scroll;
+}
+
+.pugin-component-style {
+  padding: $base-spacing-unit-tiny;
+  background-color: $white;
+  border: solid 1px $grey20;
+
+  & table {
+    width: 100%;
+  }
+
+  & th {
+    background-color: $grey30;
+  }
+}
+
+
+
+.pugin-component-notes {
+  padding: $base-spacing-unit-tiny;
+}

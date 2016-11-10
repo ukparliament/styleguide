@@ -1,3 +1,8 @@
 // Place all the styles related to the styleguide controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "../../../pugin/app/assets/stylesheets/application";
+@import "components/shame";
+@import "font-awesome-sprockets";
+@import "font-awesome";
