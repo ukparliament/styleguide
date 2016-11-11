@@ -8,12 +8,12 @@ Style guide for UK Parliament
 
 ## Installation
 
+To install:
 ```bash
 $ make install
 ```
 
 To serve:
-
 ```bash
 $ rails s
 ```

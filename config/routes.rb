@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   # get 'styleguide/index'
   root to: 'styleguide#index'
 
+  get '/dev' , to: 'pages#dev', as: 'dev'
+
 end
