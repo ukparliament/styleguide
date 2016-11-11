@@ -1,0 +1,3 @@
+[submodule "pugin"]
+	path = pugin
+	url = https://github.com/ukpds/pugin.git
