@@ -1,4 +1,5 @@
-initialise: install
-
 install:
-	@cd pugin && npm install
+	@git submodule init
+	@git submodule update
+	@bundle
+	@make install -C pugin
