@@ -1,14 +1,11 @@
 - content_for :title do
-  | Page title
-
+  | Components - Header
 
 - content_for :pageheading do
-  | Page heading
-
+  | Header
 
 - content_for :preview do
   = render 'layouts/pugin/modules/header.html.slim'
-
 
 - content_for :markup do
   pre
@@ -16,12 +13,14 @@
       script
         = render 'layouts/pugin/modules/header.html.slim'
 
-
 - content_for :cssusage do
   table
       tr
+        th
+          | Class Name &amp; Usage
+      tr
         td
-          | example table
+          | No additional styling options currently available
 
 - content_for :notes do
-  p example notes
+  p This is the header component that should be used on all public facing UK Parliament websites. This component and its associated styling should not be changed without official approval.

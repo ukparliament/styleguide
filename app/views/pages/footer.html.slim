@@ -1,0 +1,26 @@
+- content_for :title do
+  | Components - Footer
+
+- content_for :pageheading do
+  | Footer
+
+- content_for :preview do
+  = render 'layouts/pugin/modules/footer.html.slim'
+
+- content_for :markup do
+  pre
+    code.language-markup
+      script
+        = render 'layouts/pugin/modules/footer.html.slim'
+
+- content_for :cssusage do
+  table
+      tr
+        th
+          | Class Name &amp; Usage
+      tr
+        td
+          | No additional styling options currently available
+
+- content_for :notes do
+  p This is the footer component that should be used on all public facing UK Parliament websites. This component and its associated styling should not be changed without official approval.

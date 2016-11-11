@@ -4,20 +4,22 @@ html lang="en"
     meta charset="UTF-8"
     meta content="width=device-width, initial-scale=1.0" name="viewport"
     meta content="ie=edge" http-equiv="X-UA-Compatible"
-    title = content_for?(:title) ? yield(:title) : "Uk Parliament Style guide"
+    title = content_for?(:title) ? yield(:title) : "UK Parliament Style guide"
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = csrf_meta_tags
 
   body
-    div.pugin-page-wrap
+    include header.html.slim
+  
+    div.sty-wrap
 
       div.container
-        div.row.pugin-component-head
+        div.row.sty-blk
           div.col-6
-            h3
+            h2
              = content_for?(:pageheading) ? yield(:pageheading) : ""
           div.col-6
-            p.pugin-component-head-github
+            p.sty-blk-git
               i.fa.fa-github aria-hidden="true"
               a[href="#" title=""]
                | Last commit
@@ -25,29 +27,37 @@ html lang="en"
 
       div.container
         div.row
-          div.col-7
-            h4
-             | Example
-            div.pugin-component-example
+          div.col-12
+            div.sty-cmp-preview
               = content_for?(:preview) ? yield(:preview) : ""
 
-          div.col-5
-            h4
+      div.container
+        div.row
+          div.col-7
+            h3
              | HTML Markup
-            div.pugin-component-markup
+            div.sty-cmp-markup
               = content_for?(:markup) ? yield(:markup) : ""
-
-            h4
+          div.col-5
+            h3
              | CSS Styling Options
-            div.pugin-component-style
+            div.sty-cmp-styling
               = content_for?(:cssusage) ? yield(:cssusage) : ""
-
-
-            h4
+            h3
              | Notes
-            div.pugin-component-info
+            div.sty-cmp-notes
               = content_for?(:notes) ? yield(:notes) : ""
-
+            
+      div.container
+        div.row.sty-blk
+          div.col-12
+            p
+              i.fa.fa-comments aria-hidden="true"
+              |  If you have an issue or feedback for this pattern please 
+              a[href="#" title=""]
+                | raise a ticket on Github.  
+              
+    include footer.html.slim
 
     = yield
 
