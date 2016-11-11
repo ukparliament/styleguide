@@ -13,15 +13,7 @@ bundle install
 ```
 
 ```bash
-cd pugin
-```
-
-```bash
-npm install
-```
-
-```bash
-cd ..
+make
 ```
 
 ```bash
