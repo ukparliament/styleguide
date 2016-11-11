@@ -1,5 +1,6 @@
 task :before_assets_precompile do
   # run a command which starts your packaging
+  system('heroku buildpacks:set heroku/nodejs')
   system('make')
 end
 
