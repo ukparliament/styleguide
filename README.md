@@ -9,10 +9,7 @@ Style guide for UK Parliament
 ## Installation
 
 ```bash
-$ git submodule init
-$ git submodule update
-$ bundle install
-$ make install -C pugin
+$ make install
 ```
 
 To serve:
