@@ -8,25 +8,15 @@ Style guide for UK Parliament
 
 ## Installation
 
+To install:
 ```bash
-bundle install
+$ make install
 ```
 
-```bash
-cd pugin
-```
-
-```bash
-npm install
-```
-
-```bash
-cd ..
-```
-
+To serve:
 ```bash
 $ rails s
 ```
 
 ## Licence
-The gem is available under the [Open Parliament Licence](http://www.parliament.uk/site-information/copyright/open-parliament-licence/).
+This microservice is available under the [Open Parliament Licence](http://www.parliament.uk/site-information/copyright/open-parliament-licence/).

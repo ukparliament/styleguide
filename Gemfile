@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
+# Uk Parliament Pugin gem
 gem 'pugin', path: './pugin'
 
 # Slim template
