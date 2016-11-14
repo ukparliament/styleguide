@@ -8,15 +8,12 @@ Style guide for UK Parliament
 
 ## Installation
 
+To install:
 ```bash
-$ git submodule init
-$ git submodule update
-$ bundle install
-$ make install -C pugin
+$ make install
 ```
 
 To serve:
-
 ```bash
 $ rails s
 ```

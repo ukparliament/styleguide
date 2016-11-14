@@ -1,0 +1,7 @@
+div.sty-nav
+  div.vert-right
+    /Remember to remove this implementation of h4 tag!
+    h4
+      = content_for?(:nav_vr_heading) ? yield(:nav_vr_heading) : ""
+    
+    = content_for?(:nav_vr_items) ? yield(:nav_vr_items) : ""
