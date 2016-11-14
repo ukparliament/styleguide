@@ -4,5 +4,10 @@
 
 @import "../../../pugin/app/assets/stylesheets/application";
 @import "components/shame";
+
+/* Settings */
+@import "settings/navigation";
+
+/* Icon Fonts */
 @import "font-awesome-sprockets";
 @import "font-awesome";

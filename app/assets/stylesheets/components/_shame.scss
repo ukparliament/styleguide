@@ -1,7 +1,7 @@
 .pds-footer-wrap:after {
   clear: both;
   display: block;
-  content: '';  
+  content: '';
 }
 
 /* Base Styles for UK Parliament Style Guide */
@@ -27,6 +27,10 @@
   & h3 {
     color: $grey80;
   }
+}
+
+.hello {
+  color: $parl-green;
 }
 
 /* Style Guide Feature Block */

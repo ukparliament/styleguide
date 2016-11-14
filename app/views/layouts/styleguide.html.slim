@@ -4,7 +4,7 @@ html lang="en"
     meta charset="UTF-8"
     meta content="width=device-width, initial-scale=1.0" name="viewport"
     meta content="ie=edge" http-equiv="X-UA-Compatible"
-    title = content_for?(:title) ? yield(:title) : "UK Parliament Style Guide"
+    title = content_for?(:page_title) ? yield(:page_title) : "UK Parliament Style Guide"
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = csrf_meta_tags
 
@@ -13,12 +13,19 @@ html lang="en"
   
     div.sty-wrap
     
-      div.container
+      = render 'layouts/nav_horizontal'
+      
+      div.container  
         div.row
           div.col-9
+          
+            div.row
+              div.col-12
+                h1
+                  = content_for?(:page_heading) ? yield(:page_heading) : ""
             
-          div.col-3.sty-blk
-            = render 'layouts/navigation_vertical'
+          div.col-3
+            = render 'layouts/nav_vertical'
               
     = render 'layouts/pugin/modules/footer'
 
