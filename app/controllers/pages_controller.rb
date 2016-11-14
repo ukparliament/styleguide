@@ -4,5 +4,6 @@ class PagesController < ApplicationController
 
   def dev
     render layout: "application"
+    # render "{pathOfViewsFile}" layout: "{layoutTemplate}"
   end
 end
