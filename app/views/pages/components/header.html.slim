@@ -1,9 +1,25 @@
-- content_for :title do
+- content_for :page_title do
   | Components - Header
 
-- content_for :pageheading do
-  | Header
+- content_for :nav_hr_heading do
+  | Components
 
+- content_for :page_heading do
+  | Header
+  
+-content_for :nav_vr_heading do
+  | UI Components
+    
+- content_for :nav_vr_items do
+  a[href='' title='']
+    | Item 1
+  a[href='' title='']
+    | Item 2
+  a[href='' title='']
+    | Item 3
+  a[href='' title='']
+    | Item 4
+  
 - content_for :preview do
   = render 'layouts/pugin/modules/header.html.slim'
 
