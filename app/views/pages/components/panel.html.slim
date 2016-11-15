@@ -1,5 +1,9 @@
 - content_for :page_title do
   | Components - Panel
+  
+- content_for :nav_vr_section do
+  / Required for sectioned pages (design, components, etc) - optional for others
+  = render 'layouts/nav_vr_components'
 
 - content_for :page_heading do
   | Panel

@@ -13,23 +13,28 @@ html lang="en"
   
     div.sty-wrap
     
-      = render 'layouts/nav_horizontal'
+      = render 'layouts/nav_hr'
       
       div.container  
         div.row
           div.col-9
           
-            div.row
-              div.col-12
-                h1
-                  = content_for?(:page_heading) ? yield(:page_heading) : ""
+            = content_for?(:page_heading) ? yield(:page_heading) : ""
             
+            = content_for?(:notes) ? yield(:notes) : ""
+            
+            = content_for?(:preview) ? yield(:preview) : ""
+            
+            = content_for?(:markup) ? yield(:markup) : ""
+            
+            = content_for?(:cssusage) ? yield(:cssusage) : ""
+            
+            = content_for?(:feedback) ? yield(:feedback) : ""
+
           div.col-3
-            = render 'layouts/nav_vertical'
+            = render 'layouts/nav_vr'
               
     = render 'layouts/pugin/modules/footer'
-
-    = yield
 
     = "\n"
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'

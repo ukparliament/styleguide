@@ -1,42 +1,48 @@
 - content_for :page_title do
   | Components - Header
 
-- content_for :nav_hr_heading do
-  | Components
-
-- content_for :page_heading do
-  | Header
+- content_for :nav_vr_section do
+  / Required for sectioned pages (design, components, etc) - optional for others
+  = render 'layouts/nav_vr_components'
   
--content_for :nav_vr_heading do
-  | UI Components
-    
-- content_for :nav_vr_items do
-  a[href='' title='']
-    | Item 1
-  a[href='' title='']
-    | Item 2
-  a[href='' title='']
-    | Item 3
-  a[href='' title='']
-    | Item 4
+- content_for :page_heading do
+  div.row
+    div.col-12
+      h1
+        | Header
+        
+- content_for :notes do
+  div.row
+    div.col-12
+      p 
+        | This is the header component that should be used on all public facing UK Parliament websites. This component and its associated styling should not be changed without official approval.
   
 - content_for :preview do
-  = render 'layouts/pugin/modules/header.html.slim'
-
-- content_for :markup do
-  pre
-    code.language-markup
-      script
+  div.row
+    div.col-12
+      h3
+        | Preview
+      div.sty-cmp-preview
         = render 'layouts/pugin/modules/header.html.slim'
 
-- content_for :cssusage do
-  table
-      tr
-        th
-          | Class Name &amp; Usage
-      tr
-        td
-          | No additional styling options currently available
+- content_for :markup do
+  div.row
+    div.col-12
+      h3
+        | HTML Markup
+      div.sty-cmp-markup
+        pre
+          code.language-markup
+            script
+              = render 'layouts/pugin/modules/header.html.slim'
 
-- content_for :notes do
-  p This is the header component that should be used on all public facing UK Parliament websites. This component and its associated styling should not be changed without official approval.
+- content_for :feedback do
+  div.row
+    div.col-12
+      h3
+        | Feedback
+      p
+        i.fa.fa-comments aria-hidden="true"
+        |  If you have an issue or feedback for this pattern please 
+        a[href="#" title=""]
+          | raise a ticket on Github.  
