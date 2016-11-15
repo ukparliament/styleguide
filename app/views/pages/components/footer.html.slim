@@ -1,6 +1,6 @@
 - content_for :title do
   | Components - Footer
-  
+
 - content_for :nav_vr_section do
   / Required for sectioned pages (design, components, etc) - optional for others
   = render 'layouts/nav_vr_components'
@@ -14,8 +14,7 @@
 - content_for :markup do
   pre
     code.language-markup
-      script
-        = render 'layouts/pugin/modules/footer.html.slim'
+        = render_source 'layouts/pugin/modules/footer.html.slim'
 
 - content_for :cssusage do
   table
