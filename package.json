@@ -10,7 +10,10 @@
     "font-awesome": "^4.7.0",
     "prismjs": "^1.5.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "font-awesome": "^4.7.0",
+    "prismjs": "^1.5.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

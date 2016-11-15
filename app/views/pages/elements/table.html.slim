@@ -1,31 +1,36 @@
 - content_for :page_title do
-  | Components - Header
+  / Required, title used for page and SEO
+  | Element - Table
+
 
 - content_for :nav_vr_section do
   / Required for sectioned pages (design, components, etc) - optional for others
-  = render 'layouts/nav_vr_components'
+  = render 'layouts/nav_vr_elements'
+
 
 - content_for :page_heading do
+  / Required for page heading and SEO
   div.row
     div.col-12
-      h1
-        | Header
+      h1 Tables
+
 
 - content_for :notes do
-  div.row
-    div.col-12
-      p
-        | This is the header component that should be used on all public facing UK Parliament websites. This component and its associated styling should not be changed without official approval.
+  / Optional
+
 
 - content_for :preview do
+  / Required to preview style
   div.row
     div.col-12
       h3
         | Preview
       div.sty-cmp-preview
-        = render 'layouts/pugin/modules/header'
+        = render 'pages/elements/partials/table'
+
 
 - content_for :markup do
+  / Required if displaying a style, otherwise optional
   div.row
     div.col-12
       h3
@@ -33,9 +38,11 @@
       div.sty-cmp-markup
         pre
           code.language-markup
-              = render_source 'layouts/pugin/modules/header'
+            = render_source 'pages/elements/partials/table'
+
 
 - content_for :feedback do
+  / Required if displaying a style, otherwise optional
   div.row
     div.col-12
       h3

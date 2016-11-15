@@ -9,12 +9,12 @@
   | Breadcrumbs
 
 - content_for :preview do
-  = render 'layouts/pugin/modules/breadcrumb.html.slim'
+  = render 'layouts/pugin/modules/breadcrumb'
 
 - content_for :markup do
   pre
     code.language-markup
-        = render_source 'layouts/pugin/modules/breadcrumb.html.slim'
+      = render_source 'layouts/pugin/modules/breadcrumb'
 
 - content_for :cssusage do
   table

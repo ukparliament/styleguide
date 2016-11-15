@@ -9,8 +9,8 @@ html lang="en"
     = csrf_meta_tags
 
   body
-    = render 'layouts/pugin/modules/header.html.slim'
-  
+    = render 'layouts/pugin/modules/header'
+
     div.sty-wrap
 
       div.container
@@ -47,17 +47,17 @@ html lang="en"
              | Notes
             div.sty-cmp-notes
               = content_for?(:notes) ? yield(:notes) : ""
-            
+
       div.container
         div.row.sty-blk
           div.col-12
             p
               i.fa.fa-comments aria-hidden="true"
-              |  If you have an issue or feedback for this pattern please 
+              |  If you have an issue or feedback for this pattern please
               a[href="#" title=""]
-                | raise a ticket on Github.  
-              
-    = render 'layouts/pugin/modules/footer.html.slim'
+                | raise a ticket on Github.
+
+    = render 'layouts/pugin/modules/footer'
 
     = yield
 

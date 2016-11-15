@@ -9,12 +9,12 @@
   | Panel
 
 - content_for :preview do
-  = render 'layouts/pugin/modules/panel.html.slim'
+  = render 'layouts/pugin/modules/panel'
 
 - content_for :markup do
   pre
     code.language-markup
-        = render_source 'layouts/pugin/modules/panel.html.slim'
+      = render_source 'layouts/pugin/modules/panel'
 
 - content_for :cssusage do
   table
