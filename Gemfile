@@ -43,6 +43,8 @@ gem 'high_voltage'
 # Font Awesome, for CSS icon sets
 gem 'font-awesome-sass'
 
+gem 'htmlentities'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
