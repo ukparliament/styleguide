@@ -1,0 +1,57 @@
+/* Navigation Holder Block */
+
+.sty-nav {
+  background-color: $grey05;
+  border: solid 1px $grey20;
+}
+
+/* Horizontal Navigation */
+
+.hrz-menu {
+  & > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & > li {
+    display: inline;
+    line-height: ($base-font-size + $base-spacing-unit);
+    padding: ($base-spacing-unit-small - 2) $base-spacing-unit;
+    color: $grey80;
+    border-right: solid 1px $grey15;
+      &:hover {
+        background-color: $grey10;
+      }
+      & > a {
+        text-decoration: none;
+        &:hover {
+          color: $grey80;
+        }
+      }
+    }
+  }
+}
+
+/* Vertical Navigation */
+
+.vrt-menu {
+  padding: $base-spacing-unit;
+  & > h4 {
+    padding: 0 0 $base-spacing-unit 0;
+    margin: 0;
+    color: $grey100;
+  }
+  & > a {
+    display: block;
+    padding: $base-spacing-unit-tiny 0;
+    color: $grey80;
+    text-decoration: none;
+    border-top: solid 1px $grey15;
+    &:last-child {
+      border-bottom: solid 1px $grey15;
+    }
+    &:hover, :focus {
+      color: $grey60;
+      text-decoration: underline;
+    }
+  }
+}
