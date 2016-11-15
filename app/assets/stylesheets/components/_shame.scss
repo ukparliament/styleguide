@@ -8,12 +8,12 @@
 
 .sty-wrap {
   width: 100%;
-  padding: $base-spacing-unit 0;
+  padding: 0 0 $base-spacing-unit;
 
   &:after {
     clear: both;
     display: block;
-    content: "";
+    content: '';
   }
 
   & i {
@@ -22,10 +22,12 @@
 
   & h1, h2, h3, h4, p {
     margin: 0;
+    padding-left: 0;
   }
 
   & h3 {
-    color: $grey80;
+    color: $grey60;
+    padding-top: $base-spacing-unit;
   }
 }
 
