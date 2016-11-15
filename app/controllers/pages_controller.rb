@@ -11,4 +11,7 @@ class PagesController < ApplicationController
   def elements
     render "pages/elements/typography"
   end
+  def member
+    render "pages/member/profile_hoc"
+  end
 end

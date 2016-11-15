@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get '/components', to: redirect('/components/header', status: 302)
   get '/design', to: redirect('/design/colours', status: 302)
   get '/elements', to: redirect('/elements/typography', status: 302)
+  get '/member', to: redirect('/member/profile_hoc', status: 302)
 end
