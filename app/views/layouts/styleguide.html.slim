@@ -17,8 +17,8 @@ html lang="en"
 
       div.container
         div.row
-          div.col-9
-
+          div.col-8
+          
             = content_for?(:page_heading) ? yield(:page_heading) : ""
 
             = content_for?(:notes) ? yield(:notes) : ""
@@ -31,7 +31,7 @@ html lang="en"
 
             = content_for?(:feedback) ? yield(:feedback) : ""
 
-          div.col-3
+          div.col-4
             = render 'layouts/nav_vr'
 
     = render 'layouts/pugin/modules/footer'
