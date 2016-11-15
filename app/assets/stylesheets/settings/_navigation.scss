@@ -3,6 +3,9 @@
 .sty-nav {
   background-color: $grey05;
   border: solid 1px $grey20;
+  &.vertical {
+    margin: $base-spacing-unit 0 0 0;
+  }
 }
 
 /* Horizontal Navigation */
@@ -40,18 +43,26 @@
     margin: 0;
     color: $grey100;
   }
-  & > a {
-    display: block;
-    padding: $base-spacing-unit-tiny 0;
-    color: $grey80;
-    text-decoration: none;
-    border-top: solid 1px $grey15;
-    &:last-child {
-      border-bottom: solid 1px $grey15;
-    }
-    &:hover, :focus {
-      color: $grey60;
-      text-decoration: underline;
+  & > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & > li {
+      display: block;
+      padding: $base-spacing-unit-tiny 0;
+      color: $grey80;
+      text-decoration: none;
+      border-top: solid 1px $grey15;
+      &:last-child {
+        border-bottom: solid 1px $grey15;
+      }
+      & > a {
+        text-decoration: none;
+        &:hover, :focus {
+          color: $grey60;
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
