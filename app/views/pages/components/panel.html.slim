@@ -14,8 +14,7 @@
 - content_for :markup do
   pre
     code.language-markup
-      script
-        = render 'layouts/pugin/modules/panel'
+      = render_source 'layouts/pugin/modules/panel'
 
 - content_for :cssusage do
   table

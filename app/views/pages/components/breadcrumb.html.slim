@@ -14,8 +14,7 @@
 - content_for :markup do
   pre
     code.language-markup
-      script
-        = render 'layouts/pugin/modules/breadcrumb'
+      = render_source 'layouts/pugin/modules/breadcrumb'
 
 - content_for :cssusage do
   table
