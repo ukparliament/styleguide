@@ -1,6 +1,55 @@
-h1 Example heading
-h2 Example heading
-h3 Example heading
-h4 Example heading
-h5 Example heading
-h6 Example heading
+- content_for :page_title do
+  / Required, title used for page and SEO
+  | Element - Typography
+
+
+- content_for :nav_vr_section do
+  / Required for sectioned pages (design, components, etc) - optional for others
+  = render 'layouts/nav_vr_elements'
+
+
+- content_for :page_heading do
+  / Required for page heading and SEO
+  div.row
+    div.col-12
+      h1 Typography
+
+
+- content_for :notes do
+  / Optional
+
+
+- content_for :preview do
+  / Required to preview style
+  div.row
+    div.col-12
+      h3
+        | Preview
+      div.sty-cmp-preview
+        = render_source 'pages/elements/partials/typography'
+
+
+- content_for :markup do
+  / Required if displaying a style, otherwise optional
+  div.row
+    div.col-12
+      h3
+        | HTML Markup
+      div.sty-cmp-markup
+        pre
+          code.language-markup
+            script
+              = render 'pages/elements/partials/typography'
+
+
+- content_for :feedback do
+  / Required if displaying a style, otherwise optional
+  div.row
+    div.col-12
+      h3
+        | Feedback
+      p
+        i.fa.fa-comments aria-hidden="true"
+        |  If you have an issue or feedback for this pattern please
+        a[href="#" title=""]
+          | raise a ticket on Github.

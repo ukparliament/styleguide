@@ -1,6 +1,6 @@
 - content_for :title do
   | Components - Breadcrumbs
-  
+
 - content_for :nav_vr_section do
   / Required for sectioned pages (design, components, etc) - optional for others
   = render 'layouts/nav_vr_components'
@@ -9,13 +9,13 @@
   | Breadcrumbs
 
 - content_for :preview do
-  = render 'layouts/pugin/modules/breadcrumb.html.slim'
+  = render 'layouts/pugin/modules/breadcrumb'
 
 - content_for :markup do
   pre
     code.language-markup
       script
-        = render 'layouts/pugin/modules/breadcrumb.html.slim'
+        = render 'layouts/pugin/modules/breadcrumb'
 
 - content_for :cssusage do
   table

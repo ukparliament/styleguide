@@ -1,6 +1,6 @@
 - content_for :page_title do
   | Components - Panel
-  
+
 - content_for :nav_vr_section do
   / Required for sectioned pages (design, components, etc) - optional for others
   = render 'layouts/nav_vr_components'
@@ -9,13 +9,13 @@
   | Panel
 
 - content_for :preview do
-  = render 'layouts/pugin/modules/panel.html.slim'
+  = render 'layouts/pugin/modules/panel'
 
 - content_for :markup do
   pre
     code.language-markup
       script
-        = render 'layouts/pugin/modules/panel.html.slim'
+        = render 'layouts/pugin/modules/panel'
 
 - content_for :cssusage do
   table

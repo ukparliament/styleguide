@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: 'styleguide#index'
 
   # get '/components' , to: 'pages#components', as: 'components'
-  get '/components' => redirect('/components/header', status: 302)
-  get '/design' => redirect('/design/colours', status: 302)
-  get '/elements' => redirect('/elements/typography', status: 302)
+  get '/components', to: redirect('/components/header', status: 302)
+  get '/design', to: redirect('/design/colours', status: 302)
+  get '/elements', to: redirect('/elements/typography', status: 302)
 end
