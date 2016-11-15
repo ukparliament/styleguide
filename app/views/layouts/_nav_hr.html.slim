@@ -1,11 +1,7 @@
 div.container
   div.row
-    div.col-3
-      /Remember to remove this implementation of p tag!
-      p
-        = content_for?(:nav_hr_heading) ? yield(:nav_hr_heading) : ""
-    div.col-9
-      div.sty-nav
+    div.col-12.sty-nav
+      div.hrz-menu
         ul
           li = link_to 'Design', page_path('design/')
           li = link_to 'Elements', page_path('elements/')
