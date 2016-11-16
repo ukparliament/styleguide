@@ -1,54 +1,47 @@
 - content_for :page_title do
-  / Required, title used for page and SEO
-  | Element - Typography
-
+  | Templates - Members Card (House of Commons)
 
 - content_for :nav_vr_section do
   / Required for sectioned pages (design, components, etc) - optional for others
-  = render 'layouts/nav_vr_elements'
-
-
+  = render 'layouts/nav_vr_templates'
+  
 - content_for :page_heading do
-  / Required for page heading and SEO
   div.row
     div.col-12
-      h1 Typography
-
+      h1.sty-typ-head1
+        | Members Card (House of Commons)
 
 - content_for :notes do
-  / Optional
-
+  div.row
+    div.col-12
+      p.sty-typ 
+        | This is an example of a House of Commons members card template used on the UK Parliament websites.
 
 - content_for :preview do
-  / Required to preview style
   div.row
     div.col-12
-      h3
+      h2.sty-typ-head2
         | Preview
       div.sty-cmp-preview
-        = render 'pages/elements/partials/typography'
-
+        = render 'pages/templates/partials/member_profile_hoc'
 
 - content_for :markup do
-  / Required if displaying a style, otherwise optional
   div.row
     div.col-12
-      h3
+      h2.sty-typ-head2
         | HTML Markup
       div.sty-cmp-markup
         pre
           code.language-markup
-            = render_source 'pages/elements/partials/typography'
-
+            = render_source 'pages/templates/partials/member_profile_hoc'
 
 - content_for :feedback do
-  / Required if displaying a style, otherwise optional
   div.row
     div.col-12
-      h3
+      h2.sty-typ
         | Feedback
-      p
+      p.sty-typ
         i.fa.fa-comments aria-hidden="true"
-        |  If you have an issue or feedback for this pattern please
+        |  If you have an issue or feedback for this template please 
         a[href="#" title=""]
           | raise a ticket on Github.
