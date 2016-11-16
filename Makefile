@@ -1,3 +1,3 @@
 install:
 	@make install -C pugin
-	@make css -C pugin
+	@make css images -C pugin
