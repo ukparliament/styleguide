@@ -8,19 +8,19 @@
 - content_for :page_heading do
   div.row
     div.col-12
-      h1
+      h1.sty-typ-head1
         | Header
 
 - content_for :notes do
   div.row
     div.col-12
-      p
+      p.sty-typ
         | This is the header component that should be used on all public facing UK Parliament websites. This component and its associated styling should not be changed without official approval.
 
 - content_for :preview do
   div.row
     div.col-12
-      h3
+      h2.sty-typ-head2
         | Preview
       div.sty-cmp-preview
         = render 'layouts/pugin/modules/header'
@@ -28,7 +28,7 @@
 - content_for :markup do
   div.row
     div.col-12
-      h3
+      h2.sty-typ-head2
         | HTML Markup
       div.sty-cmp-markup
         pre
@@ -38,9 +38,9 @@
 - content_for :feedback do
   div.row
     div.col-12
-      h3
+      h2.sty-typ-head2
         | Feedback
-      p
+      p.sty-typ
         i.fa.fa-comments aria-hidden="true"
         |  If you have an issue or feedback for this pattern please 
         a[href="#" title=""]

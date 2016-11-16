@@ -9,7 +9,11 @@ html lang="en"
     = csrf_meta_tags
 
   body
-    = render 'layouts/pugin/modules/header'
+    div.sty-head
+      div.container
+        div.row
+          div.col-12
+            = render 'layouts/pugin/modules/header'
 
     div.sty-wrap
 
@@ -34,7 +38,10 @@ html lang="en"
           div.col-4
             = render 'layouts/nav_vr'
 
-    = render 'layouts/pugin/modules/footer'
+    div.container
+      div.row
+        div.col-12
+          = render 'layouts/pugin/modules/footer'
 
     = "\n"
     script src="/_js/prism.js"

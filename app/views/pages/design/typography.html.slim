@@ -1,18 +1,18 @@
 - content_for :page_title do
   / Required, title used for page and SEO
-  | Elements - Table
+  | Design - Typography
 
 
 - content_for :nav_vr_section do
   / Required for sectioned pages (design, components, etc) - optional for others
-  = render 'layouts/nav_vr_elements'
+  = render 'layouts/nav_vr_design'
 
 
 - content_for :page_heading do
   / Required for page heading and SEO
   div.row
     div.col-12
-      h1.sty-typ-head1 Tables
+      h1.sty-typ-head1 Typography
 
 
 - content_for :notes do
@@ -26,7 +26,7 @@
       h2.sty-typ-head2
         | Preview
       div.sty-cmp-preview
-        = render 'pages/elements/partials/table'
+        = render 'pages/design/partials/typography'
 
 
 - content_for :markup do
@@ -38,7 +38,7 @@
       div.sty-cmp-markup
         pre
           code.language-markup
-            = render_source 'pages/elements/partials/table'
+            = render_source 'pages/design/partials/typography'
 
 
 - content_for :feedback do
