@@ -20,11 +20,15 @@
 
 /* Style Guide Typography */
 
+.pds-panel > h3 {
+  margin: 0;
+}
+
 .sty-typ {
   margin: 0;
   padding-left: 0;
   &-head1 {
-    font-size: 36px;
+    font-size: 32px;
     padding: $base-spacing-unit-small 0 0 0;
   }
   &-head2 {
@@ -50,7 +54,7 @@
 
 .sty-cmp {
   &-preview {
-    padding: $base-spacing-unit-tiny;
+    padding: $base-spacing-unit-small $base-spacing-unit;
     border: solid 1px $grey20;
   }
   &-markup {
