@@ -1,38 +1,37 @@
-.pds-footer-wrap:after {
-  clear: both;
-  display: block;
-  content: '';
-}
-
 /* Base Styles for UK Parliament Style Guide */
+
+.sty-head {
+  width: 100%;
+  background-color: $black;
+}
 
 .sty-wrap {
   width: 100%;
   padding: 0 0 $base-spacing-unit;
-
   &:after {
     clear: both;
     display: block;
     content: '';
   }
-
   & i {
     margin: 0 $base-spacing-unit-tiny 0 0;
   }
-
-  & h1, h2, h3, h4, p {
-    margin: 0;
-    padding-left: 0;
-  }
-
-  & h3 {
-    color: $grey60;
-    padding-top: $base-spacing-unit;
-  }
 }
 
-.hello {
-  color: $parl-green;
+/* Style Guide Typography */
+
+.sty-typ {
+  margin: 0;
+  padding-left: 0;
+  &-head1 {
+    font-size: 36px;
+    padding: $base-spacing-unit-small 0 0 0;
+  }
+  &-head2 {
+    font-size: 28px;
+    color: $grey75;
+    padding: $base-spacing-unit-small 0 0 0;
+  }
 }
 
 /* Style Guide Feature Block */
@@ -41,11 +40,6 @@
   margin: $base-spacing-unit-small 0;
   background-color: $grey10;
   border: solid 1px $grey20;
-
-  & h2 {
-    text-transform: uppercase;
-  }
-
   &-git {
     padding: $base-spacing-unit 0 0 0;
     text-align: right;
@@ -68,20 +62,6 @@
     margin: 0 0 $base-spacing-unit-small;
     border: solid 1px $grey20;
     text-align: left;
-
-    & table {
-      width: 100%;
-    }
-    & th, td {
-      padding: $base-spacing-unit-tiny 0 $base-spacing-unit-tiny $base-spacing-unit-tiny;
-    }
-    & th {
-      background-color: $grey20;
-    }
-
-    & td {
-      border: solid 1px $grey20;
-    }
   }
   &-notes {
     padding: $base-spacing-unit-tiny 0 $base-spacing-unit-tiny $base-spacing-unit-small;
