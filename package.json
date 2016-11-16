@@ -6,6 +6,9 @@
   "directories": {
     "test": "test"
   },
+  "engines": {
+    "node": "7.1.0"
+  },
   "dependencies": {
     "font-awesome": "^4.7.0",
     "prismjs": "^1.5.1"
