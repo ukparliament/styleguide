@@ -13,3 +13,41 @@
   div.row
     div.col-12
       h1.sty-typ-head1 Definition Lists
+      
+- content_for :notes do
+  / Optional
+
+
+- content_for :preview do
+  / Required to preview style
+  div.row
+    div.col-12
+      h2.sty-typ-head2
+        | Preview
+      div.sty-cmp-preview
+        = render 'pages/elements/partials/lists'
+
+
+- content_for :markup do
+  / Required if displaying a style, otherwise optional
+  div.row
+    div.col-12
+      h2.sty-typ-head2
+        | HTML Markup
+      div.sty-cmp-markup
+        pre
+          code.language-markup
+            = render_source 'pages/elements/partials/lists'
+
+
+- content_for :feedback do
+  / Required if displaying a style, otherwise optional
+  div.row
+    div.col-12
+      h2.sty-typ-head2
+        | Feedback
+      p.sty-typ
+        i.fa.fa-comments aria-hidden="true"
+        |  If you have an issue or feedback for this pattern please 
+        a[href="#" title=""]
+          | raise a ticket on Github.
