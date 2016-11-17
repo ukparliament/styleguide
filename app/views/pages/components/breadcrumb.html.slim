@@ -23,7 +23,7 @@
       h2.sty-typ-head2
         | Preview
       div.sty-cmp-preview
-        = render 'layouts/pugin/modules/breadcrumb'
+        = render 'pages/components/partials/breadcrumb'
 
 - content_for :markup do
   div.row
@@ -33,7 +33,7 @@
       div.sty-cmp-markup
         pre
           code.language-markup
-            = render_source 'layouts/pugin/modules/breadcrumb'
+            = render_source 'pages/components/partials/breadcrumb'
 
 - content_for :feedback do
   div.row
