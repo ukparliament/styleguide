@@ -13,3 +13,31 @@
   div.row
     div.col-12
       h1.sty-typ-head1 Colours
+
+
+- content_for :notes do
+  / Optional
+  div.row
+    div.col-12
+      p.sty-typ 
+        | This is an example of the basic colour palette used on UK Parliament websites.
+
+
+- content_for :preview do
+  / Required to preview style
+  div.row
+    div.col-12
+      = render 'pages/design/partials/colours'
+
+
+- content_for :feedback do
+  / Required if displaying a style, otherwise optional
+  div.row
+    div.col-12
+      h2.sty-typ-head2
+        | Feedback
+      p.sty-typ
+        i.fa.fa-comments aria-hidden="true"
+        |  If you have an issue or feedback for this pattern please 
+        a[href="#" title=""]
+          | raise a ticket on Github.
