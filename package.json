@@ -6,6 +6,9 @@
   "directories": {
     "test": "test"
   },
+  "engines": {
+    "node": "7.1.0"
+  },
   "dependencies": {
     "font-awesome": "^4.7.0",
     "prismjs": "^1.5.1"
@@ -15,7 +18,9 @@
     "prismjs": "^1.5.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "make install",
+    "start": "bin/rails server -p $PORT -e $RAILS_ENV"
   },
   "repository": {
     "type": "git",

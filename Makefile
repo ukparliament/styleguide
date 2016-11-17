@@ -1,7 +1,5 @@
 install:
-	@git submodule init
-	@git submodule update
-	@bundle
-	@npm i
 	@make install -C pugin
-	@make build -C pugin
+	@make css images -C pugin
+	@mkdir -p ./public/_js
+	@cp ./node_modules/prismjs/prism.js ./public/_js
