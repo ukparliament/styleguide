@@ -4,7 +4,7 @@
 - content_for :nav_vr_section do
   / Required for sectioned pages (design, components, etc) - optional for others
   = render 'layouts/nav_vr_components'
-  
+
 - content_for :page_heading do
   div.row
     div.col-12
@@ -14,7 +14,7 @@
 - content_for :notes do
   div.row
     div.col-12
-      p.sty-typ 
+      p.sty-typ
         | This is the breadcrumbs component that should be used on all public facing UK Parliament websites.
 
 - content_for :preview do
@@ -23,7 +23,7 @@
       h2.sty-typ-head2
         | Preview
       div.sty-cmp-preview
-        = render 'pages/components/partials/breadcrumb'
+        = render 'layouts/pugin/modules/breadcrumb'
 
 - content_for :markup do
   div.row
@@ -42,6 +42,6 @@
         | Feedback
       p.sty-typ
         i.fa.fa-comments aria-hidden="true"
-        |  If you have an issue or feedback for this pattern please 
+        |  If you have an issue or feedback for this pattern please
         a[href="#" title=""]
           | raise a ticket on Github.
