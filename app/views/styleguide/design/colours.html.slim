@@ -1,10 +1,9 @@
 - content_for :head_title do
   // Required, title used for page and SEO
-
+  | Design - Colours
 
 - content_for :body_header do
   // Optional, a fallback header will be applied
-
 
 - content_for :body_hr_nav do
   // Optional
@@ -14,29 +13,38 @@
   // Required for page heading and SEO
   .row
     .col-12
-      h1.sty-typ-head1 UK Parliament Style Guide
+      h1.sty-typ-head1 Colours
 
 - content_for :notes do
   // Optional
   .row
     .col-12
-      p.sty-typ ...
+      p.sty-typ This is an example of the basic colour palette used on UK Parliament websites.
 
 - content_for :preview do
   // Required to preview the pattern
-
+  .row
+    .col-12
+      .sty-cmp-preview
+        = render 'styleguide/design/partials/colours'
 
 - content_for :markup do
   // Required if displaying a style, otherwise optional
 
-
 - content_for :feedback do
   // Required if displaying a style, otherwise optional
-
+  .row
+    .col-12
+      h2.sty-typ-head2 Feedback
+      p.sty-typ
+        i.fa.fa-comments aria-hidden="true"
+        |  If you have an issue or feedback for this pattern please
+        a[href="#" title=""]
+          | raise a ticket on Github.
 
 - content_for :nav_vr_section do
   // Required for sectioned pages (design, components, etc) - optional for others
-
+  = render 'layouts/nav_vr_design'
 
 - content_for :body_footer do
   // Optional, a fallback footer will be applied

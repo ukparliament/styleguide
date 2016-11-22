@@ -1,9 +1,10 @@
-div.container
-  div.row
-    div.col-12.sty-nav
-      div.hrz-menu
+.container
+  .row
+    .col-12.sty-nav
+      .hrz-menu
         ul
-          li = link_to 'Design', page_path('design/')
-          li = link_to 'Elements', page_path('elements/')
-          li = link_to "Components", page_path('components/')
-          li = link_to "Templates", page_path('templates/')
+          // Run "rails routes" to get a list of available routes
+          li = link_to 'Design', design_path
+          li = link_to 'Elements', elements_path
+          li = link_to "Components", components_path
+          li = link_to "Templates", templates_path

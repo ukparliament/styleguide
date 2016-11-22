@@ -1,6 +1,6 @@
 - content_for :head_title do
   // Required, title used for page and SEO
-
+  | Elements - Definition List
 
 - content_for :body_header do
   // Optional, a fallback header will be applied
@@ -14,29 +14,46 @@
   // Required for page heading and SEO
   .row
     .col-12
-      h1.sty-typ-head1 UK Parliament Style Guide
+      h1.sty-typ-head1 Definition List
 
 - content_for :notes do
   // Optional
   .row
     .col-12
-      p.sty-typ ...
+      p.sty-typ This is an example of a basic definition list used on the UK Parliament websites.
 
 - content_for :preview do
   // Required to preview the pattern
-
+  .row
+    .col-12
+      h2.sty-typ-head2 Preview
+      .sty-cmp-preview
+        = render 'styleguide/elements/partials/lists'
 
 - content_for :markup do
   // Required if displaying a style, otherwise optional
-
+  .row
+    .col-12
+      h2.sty-typ-head2 HTML Markup
+      .sty-cmp-markup
+        pre
+          code.language-markup
+            = render_source 'styleguide/elements/partials/lists'
 
 - content_for :feedback do
   // Required if displaying a style, otherwise optional
-
+  .row
+    .col-12
+      h2.sty-typ-head2 Feedback
+      p.sty-typ
+        i.fa.fa-comments aria-hidden="true"
+        |  If you have an issue or feedback for this pattern please
+        a[href="#" title=""]
+          | raise a ticket on Github.
 
 - content_for :nav_vr_section do
   // Required for sectioned pages (design, components, etc) - optional for others
-
+  = render 'layouts/nav_vr_elements'
 
 - content_for :body_footer do
   // Optional, a fallback footer will be applied
