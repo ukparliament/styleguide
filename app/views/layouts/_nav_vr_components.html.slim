@@ -1,6 +1,7 @@
 h4 Components
 ul
-  li = link_to 'Breadcrumbs', page_path('components/breadcrumb')
-  li = link_to 'Footer', page_path('components/footer')
-  li = link_to 'Header', page_path('components/header')
-  li = link_to 'Panel', page_path('components/panel')
+  // Run "rails routes" to get a list of available routes
+  li = link_to 'Breadcrumbs', components_breadcrumb_path
+  li = link_to 'Footer', components_footer_path
+  li = link_to 'Header', components_header_path
+  li = link_to 'Panel', components_panel_path

@@ -1,42 +1,48 @@
 - content_for :head_title do
   // Required, title used for page and SEO
-
+  | @page-page_title
 
 - content_for :body_header do
   // Optional, a fallback header will be applied
-
+  .bs
+    p @page-body_header
 
 - content_for :body_hr_nav do
   // Optional
-  = render 'layouts/nav_hr'
+  .bs
+    p @page-body_hr_nav
 
 - content_for :page_heading do
   // Required for page heading and SEO
-  .row
-    .col-12
-      h1.sty-typ-head1 UK Parliament Style Guide
+  .bs
+    p @page-page_heading
 
 - content_for :notes do
   // Optional
-  .row
-    .col-12
-      p.sty-typ ...
+  .bs
+    p @page-notes
 
 - content_for :preview do
   // Required to preview the pattern
-
+  .bs
+    p @page-preview
 
 - content_for :markup do
   // Required if displaying a style, otherwise optional
-
+  .bs
+    p @page-markup
 
 - content_for :feedback do
   // Required if displaying a style, otherwise optional
-
+  .bs
+    p @page-feedback
 
 - content_for :nav_vr_section do
   // Required for sectioned pages (design, components, etc) - optional for others
-
+  .bs
+    p @page-vr nav
 
 - content_for :body_footer do
   // Optional, a fallback footer will be applied
+  .bs
+    p @page-Footer
