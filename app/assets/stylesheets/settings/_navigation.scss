@@ -8,13 +8,32 @@
   }
 }
 
-/* Horizontal Navigation */
+/* Navigation Shared */
 
-.hrz-menu {
+.hrz-menu, .vrt-menu {
   & > ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    & > li {
+
+    }
+  }
+
+}
+
+.active {
+  font-weight: bold;
+  color: $blue;
+}
+
+/* Horizontal Navigation */
+
+.hrz-menu {
+  & > ul {
+    /*margin: 0;
+    padding: 0;
+    list-style: none;*/
     & > li {
     display: inline;
     line-height: ($base-font-size + $base-spacing-unit);
@@ -44,9 +63,9 @@
     color: $grey100;
   }
   & > ul {
-    margin: 0;
+    /*margin: 0;
     padding: 0;
-    list-style: none;
+    list-style: none;*/
     & > li {
       display: block;
       padding: $base-spacing-unit-tiny 0;
