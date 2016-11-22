@@ -33,14 +33,7 @@
 
 - content_for :feedback do
   // Required if displaying a style, otherwise optional
-  .row
-    .col-12
-      h2.sty-typ-head2 Feedback
-      p.sty-typ
-        i.fa.fa-comments aria-hidden="true"
-        |  If you have an issue or feedback for this pattern please
-        a[href="#" title=""]
-          | raise a ticket on Github.
+  = render 'styleguide/_shared/feedback'
 
 - content_for :nav_vr_section do
   // Required for sectioned pages (design, components, etc) - optional for others
