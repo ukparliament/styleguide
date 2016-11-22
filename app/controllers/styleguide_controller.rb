@@ -1,9 +1,6 @@
 class StyleguideController < ApplicationController
-
-  protect_from_forgery with: :exception
-  layout "application"
+  layout "sub_layout"
 
   def index
   end
-
 end
