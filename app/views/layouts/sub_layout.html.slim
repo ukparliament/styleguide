@@ -13,7 +13,7 @@
         = content_for?(:feedback) ? yield(:feedback) : ''
 
       .col-4
-        = render 'layouts/nav_vr'
+        = content_for?(:body_vr_nav) ? yield(:body_vr_nav) : render('layouts/nav_vr')
 
 // Render the root layout
 // By calling render file after the content_for blocks, the appropriate content gets sent up to the root layout and we get to use our core site styles.
