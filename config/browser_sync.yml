@@ -1,0 +1,12 @@
+# https://github.com/brunoskonrad/browser-sync-rails
+# synchronised browser testing
+
+# default is: localhost
+# host: 'some host'
+
+# default is: 3000
+# port: 1234
+
+# either watch this files along with `app/assets` and `app/views`
+# files:
+  # - 'some/file/**/*.css'
