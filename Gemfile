@@ -11,10 +11,12 @@ gem 'pugin', path: './pugin'
 gem 'slim-rails'
 gem 'prism-rails'
 # gem 'high_voltage'
-gem 'font-awesome-sass'
+# gem 'font-awesome-sass'
 gem 'htmlentities'
 
 group :development, :test do
+  # https://github.com/brunoskonrad/browser-sync-rails
+  gem 'browser_sync_rails'
   gem 'rspec-rails'
   gem 'capybara'
   gem'rails-controller-testing'
