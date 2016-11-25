@@ -15,8 +15,6 @@ gem 'prism-rails'
 gem 'htmlentities'
 
 group :development, :test do
-  # https://github.com/brunoskonrad/browser-sync-rails
-  gem 'browser_sync_rails'
   gem 'rspec-rails'
   gem 'capybara'
   gem'rails-controller-testing'
