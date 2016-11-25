@@ -5,7 +5,7 @@ RSpec.describe "styleguide/components/footer.html.slim", type: :view do
   describe "GET #footer" do
     before(:each) do
       # you'll need to specify both the template and the layout explicitly
-      render template: 'styleguide/components/breadcrumb', layout: 'layouts/sub_layout'
+      render template: 'styleguide/components/footer', layout: 'layouts/sub_layout'
     end
     # Repeat for each partial
     it "rendered partial" do
