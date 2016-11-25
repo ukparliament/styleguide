@@ -25,12 +25,12 @@ $ rails s
 Live reloading and synchronization with Browser-Sync, start your rails app with the above command then run the command below in another terminal instance:
 
 ```bash
-$ bundle exec rails browser_sync:start
+$ make browser-sync
 ```
 
 By default this watch for `app/assets` and `app/views`. You can also add more files to watch or change the host or port.
 
-It is done in `config/browser_sync.yml`.
+It is done in `Makefile`.
 
 ## Licence
 This microservice is available under the [Open Parliament Licence](http://www.parliament.uk/site-information/copyright/open-parliament-licence/).
