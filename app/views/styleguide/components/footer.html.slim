@@ -25,7 +25,13 @@
     = render 'layouts/pugin/modules/footer'
 
 - content_for :markup do
-  // Required if displaying a style, otherwise optional
+  // Required if displaying the markup or api call, otherwise optional
+  h2 API Call
+  .sg-markup
+    pre
+      code.language-ruby
+        | = PUGIN.get_component('modules/footer')
+
   h2 HTML Markup
   .sg-markup
     pre
