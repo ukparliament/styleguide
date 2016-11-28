@@ -1,109 +1,28 @@
-= render 'layouts/pugin/modules/header'
+/! Members : Header
+= PUGIN.get_component ('modules/header')
 
-/! Members Block : Breadcrumbs
-div.pds-cont-wrap
-  div.pds-cont-row
-    div
-      p
-        a[href="#" title=""] House of Commons
-        span.pds-crumb-spacer
-          |  /
-        a[href="#" title=""] Members
+/! Members : Breadcrumbs
+.c-fg
+  ol.crumb
+    li
+      a[href="#" title=""] House of Commons
+    li  
+      a[href="#" title=""] Members
 
-/! Members Block : Profile Headline
-div.pds-cont-wrap
-  div.pds-cont-row
-    div
-      div
-        img[alt="Member Avatar" src== '/_img/avatar-116x175.png' width='116' height='175']
-      div
-        h3 Name
-        div
-          p
-            a[href="#" title=""] Role or Status
-
-/! Members Block : Constituency
-div.pds-cont-wrap
-  div.pds-cont-row
-    div
+/! Members : Profile Card
+.c-fg
+  h1 Name
+  dl
+    dt
       h3 Constituency
-      p
-        a[href="#" title=""] Constituency location
+    dd
+      a[href="#" title=""] Constituency location
+  div
+    img[alt="Member Avatar" src== '/_img/avatar-116x175.png' width='116' height='175']
 
-/! Members Block : Party
-div.pds-cont-wrap
-  div.pds-cont-row
-    div
-      h3 Party
-      p
-        a[href="#" title=""] Party name
-
-/! Members Block : Contact Details
-div.pds-cont-wrap
-  div.pds-cont-row
-    div
-      h3 Contact
-      p
-        a[href="#" title=""] How can my MP help me?
-
-/! Members Sub-Block : Parliamentary Details
-div.pds-cont-wrap
-  div.pds-cont-row
-    div
-      h4 Parliamentary
-      dl
-        dt Address:
-        dd Address text
-        dt Tel:
-        dd
-          a[href="tel:#" title=""] Telephone number
-        dt Email:
-        dd
-          a[href="mailto:#" title=""] Email address
-
-/! Members Sub-Block : Constituency Details
-div.pds-cont-wrap
-  div.pds-cont-row
-    div
-      h4 Constituency
-      dl
-        dt Address:
-        dd Address text
-        dt Tel:
-        dd
-          a[href="tel:#" title=""] Telephone number
-        dt Email:
-        dd
-          a[href="mailto:#" title=""] Email address
-
-/! Members Sub-Block : Surgery Details
-div.pds-cont-wrap
-  div.pds-cont-row
-    div
-      h4 Surgery
-      dl
-        dt Address:
-        dd Address text
-        dt Tel:
-        dd
-          a[href="tel:#" title=""] Telephone number
-        dt Email:
-        dd
-          a[href="mailto:#" title=""] Email address
-        dt Appointment:
-        dd Appointment Status
-
-/! Members Sub-Block : Website & Social Network Details
-div.pds-cont-wrap
-  div.pds-cont-row
-    div
-      h4 Website and Social
-      dl
-        dt Website:
-        dd
-          a[href="#" title=""] Website address
-        dt Twitter:
-        dd
-          a[href="#" title=""] Twitter handle
-
-= render 'layouts/pugin/modules/footer'
+/! Members : Party
+= PUGIN.get_component('modules/panel', {title: "Party", description: "Party Name"})
+/! Members : Contact Block
+= PUGIN.get_component('modules/contact', { address: [{Email: "Email Address", Phone: "Phone Number" , Address: "Street Address", Website: "Website"}]})
+/! Members : Footer
+= PUGIN.get_component ('modules/footer')
