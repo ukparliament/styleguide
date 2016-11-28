@@ -2,18 +2,18 @@ class ComponentsController < ApplicationController
   layout "sub_layout"
 
   def breadcrumb
-    render "styleguide/components/breadcrumb"
+    render template: "styleguide/components/breadcrumb"
   end
 
   def footer
-    render "styleguide/components/footer"
+    render template: "styleguide/components/footer"
   end
 
   def header
-    render "styleguide/components/header"
+    render template: "styleguide/components/header"
   end
 
   def panel
-    render "styleguide/components/panel"
+    render template: "styleguide/components/panel"
   end
 end
