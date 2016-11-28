@@ -5,40 +5,31 @@
 - content_for :body_header do
   // Optional, a fallback header will be applied
 
-
 - content_for :body_hr_nav do
   // Optional
   = render 'layouts/nav_hr'
 
 - content_for :page_heading do
   // Required for page heading and SEO
-  .row
-    .col-12
-      h1.sty-typ-head1 Members Card (House of Lords)
+  h1 Members Card (House of Lords)
 
 - content_for :notes do
   // Optional
-  .row
-    .col-12
-      p.sty-typ This is an example of a House of Lords members card template used on the UK Parliament websites.
+  p This is an example of a House of Lords members card template used on the UK Parliament websites.
 
 - content_for :preview do
   // Required to preview the pattern
-  .row
-    .col-12
-      h2.sty-typ-head2 Preview
-      .sty-cmp-preview
-        = render 'styleguide/templates/partials/member_profile_hol'
+  h2 Preview
+  .sg-preview
+    = render 'styleguide/templates/partials/member_profile_hol'
 
 - content_for :markup do
   // Required if displaying a style, otherwise optional
-  .row
-    .col-12
-      h2.sty-typ-head2 HTML Markup
-      .sty-cmp-markup
-        pre
-          code.language-markup
-            = render_source 'styleguide/templates/partials/member_profile_hol'
+  h2 HTML Markup
+  .sg-markup
+    pre
+      code.language-markup
+        = render_source 'styleguide/templates/partials/member_profile_hol'
 
 - content_for :feedback do
   // Required if displaying a style, otherwise optional

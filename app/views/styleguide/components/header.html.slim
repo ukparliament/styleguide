@@ -12,33 +12,25 @@
 
 - content_for :page_heading do
   // Required for page heading and SEO
-  .row
-    .col-12
-      h1.sty-typ-head1 Header
+  h1 Header
 
 - content_for :notes do
   // Optional
-  .row
-    .col-12
-      p.sty-typ This is the header component that should be used on all public facing UK Parliament websites. This component and its associated styling should not be changed without official approval.
+  p This is the header component that should be used on all public facing UK Parliament websites. This component and its associated styling should not be changed without official approval.
 
 - content_for :preview do
   // Required to preview the pattern
-  .row
-    .col-12
-      h2.sty-typ-head2 Preview
-      .sty-cmp-preview
-        = render 'layouts/pugin/modules/header'
+  h2 Preview
+  .sg-preview
+    = render 'layouts/pugin/modules/header'
 
 - content_for :markup do
   // Required if displaying a style, otherwise optional
-  .row
-    .col-12
-      h2.sty-typ-head2 HTML Markup
-      .sty-cmp-markup
-        pre
-          code.language-markup
-            = render_source 'layouts/pugin/modules/header'
+  h2 HTML Markup
+  .sg-markup
+    pre
+      code.language-markup
+        = render_source 'layouts/pugin/modules/header'
 
 - content_for :feedback do
   // Required if displaying a style, otherwise optional

@@ -1,7 +1,6 @@
 - content_for :body_main do
-  .container
-    .row
-      .col-8
+    .r
+      .l-8.sg
         = content_for?(:page_heading) ? yield(:page_heading) : ''
 
         = content_for?(:notes) ? yield(:notes) : ''
@@ -12,7 +11,7 @@
 
         = content_for?(:feedback) ? yield(:feedback) : ''
 
-      .col-4
+      .l-4
         = content_for?(:body_vr_nav) ? yield(:body_vr_nav) : render('layouts/nav_vr')
 
 // Render the root layout
