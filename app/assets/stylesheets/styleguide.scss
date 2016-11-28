@@ -2,8 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* Pugin */
 @import "../../../pugin/app/assets/stylesheets/application";
-@import "components/shame";
+
+/* Components */
+@import "components/colour-palette.scss";
+@import "components/preview-blocks.scss";
+
+/* Generic */
+@import "generic/typography";
+@import "generic/shame";
+
+/* Objects */
+@import "objects/layouts";
 
 /* Settings */
 @import "settings/navigation";
