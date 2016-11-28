@@ -12,33 +12,28 @@
 
 - content_for :page_heading do
   // Required for page heading and SEO
-  .row
-    .col-12
-      h1.sty-typ-head1 Panel
+  h1 Panel
 
 - content_for :notes do
   // Optional
-  .row
-    .col-12
-      p.sty-typ This is a panel component that should be used on all public facing UK Parliament websites.
+  p This is a panel component that should be used on all public facing UK Parliament websites.
 
 - content_for :preview do
   // Required to preview the pattern
-  .row
-    .col-12
-      h2.sty-typ-head2 Preview
-      .sty-cmp-preview
-        = render 'styleguide/components/partials/panel'
+  h2 Preview
+  .sg-preview
+    = PUGIN.get_component('modules/panel', {title:"Panel Title", description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit."})
 
 - content_for :markup do
   // Required if displaying a style, otherwise optional
-  .row
-    .col-12
-      h2.sty-typ-head2 HTML Markup
-      .sty-cmp-markup
-        pre
-          code.language-markup
-            = render_source 'layouts/pugin/modules/panel'
+  h2 API Call
+  .sg-markup
+    pre
+      code.language-ruby
+        | = PUGIN.get_component(\'modules/panel\', {
+              title: "Panel Title",
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            })'
 
 - content_for :feedback do
   // Required if displaying a style, otherwise optional
