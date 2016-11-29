@@ -8,7 +8,7 @@ html lang="en"
     // if css fails, run this command from the root dir "make css -C pugin"
     link rel="stylesheet" href="/_css/styleguide.css"
 
-  body
+  body.no-js
     .sty-head
       .container
         .row
@@ -25,4 +25,5 @@ html lang="en"
           = content_for?(:body_footer) ? yield(:body_footer) : render('layouts/pugin/modules/footer')
 
     = "\n"
-    = javascript_include_tag 'application'
+    script src="/_js/vendor.js"
+    script src="/_js/application.js"

@@ -12,3 +12,5 @@
 //
 //= require prism
 //= require_tree .
+
+console.log('test');

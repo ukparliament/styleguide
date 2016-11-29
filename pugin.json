@@ -1,0 +1,9 @@
+{
+  "js": [
+    "./pugin/app/assets/javascripts",
+    "./app/assets/javascripts"
+  ],
+  "js_vendor": [
+    "./node_modules/prismjs/prism.js"
+  ]
+}
