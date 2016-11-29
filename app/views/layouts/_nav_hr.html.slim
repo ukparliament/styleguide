@@ -1,10 +1,8 @@
-.container
-  .row
-    .col-12.sty-nav
-      .hrz-menu
-        ul
-          // Run "rails routes" to get a list of available routes
-          li = link_to 'Design', design_path
-          li = link_to 'Elements', elements_path
-          li = link_to "Components", components_path
-          li = link_to "Templates", templates_path
+.r
+  .mnu-hrz
+    ul
+      // Run "rails routes" to get a list of available routes
+      li = link_to 'Design', design_path, class: ukp_active_menu(design_path)
+      li = link_to 'Elements', elements_path, class: ukp_active_menu(elements_path)
+      li = link_to "Components", components_path, class: ukp_active_menu(components_path)
+      li = link_to "Templates", templates_path, class: ukp_active_menu(templates_path)

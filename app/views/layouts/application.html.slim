@@ -9,20 +9,14 @@ html lang="en"
     link rel="stylesheet" href="/_css/styleguide.css"
 
   body.no-js
-    .sty-head
-      .container
-        .row
-          .col-12
-            = content_for?(:body_header) ? yield(:body_header) : render('layouts/pugin/modules/header')
+    = content_for?(:body_header) ? yield(:body_header) : render('layouts/pugin/modules/header')
 
-    = content_for?(:body_hr_nav) ? yield(:body_hr_nav) : ''
+    .c-fg
+      = content_for?(:body_hr_nav) ? yield(:body_hr_nav) : ''
 
-    = content_for?(:body_main) ? yield(:body_main) : render('layouts/body')
+      = content_for?(:body_main) ? yield(:body_main) : render('layouts/body')
 
-    .container
-      .row
-        .col-12
-          = content_for?(:body_footer) ? yield(:body_footer) : render('layouts/pugin/modules/footer')
+      = content_for?(:body_footer) ? yield(:body_footer) : render('layouts/pugin/modules/footer')
 
     = "\n"
     script src="/_js/vendor.js"

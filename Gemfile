@@ -11,7 +11,7 @@ gem 'pugin', path: './pugin'
 gem 'slim-rails'
 gem 'prism-rails'
 # gem 'high_voltage'
-gem 'font-awesome-sass'
+# gem 'font-awesome-sass'
 gem 'htmlentities'
 
 group :development, :test do

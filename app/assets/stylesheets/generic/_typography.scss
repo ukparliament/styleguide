@@ -1,0 +1,23 @@
+// Style Guide Typography
+
+.sg {
+  & > h1 {
+    font-size: 32px;
+    line-height: 1.5;
+    padding: $base-spacing-unit-small 0;
+  }
+  & > h2 {
+    font-size: 26px;
+    line-height: 1.5;
+    color: $grey75;
+    padding: $base-spacing-unit-small 0;
+  }
+  & > p {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0 0 $base-spacing-unit-small 0;
+  }
+  & i {
+    margin: 0 $base-spacing-unit-tiny 0 0;
+  }
+}
