@@ -21,15 +21,20 @@
   // Required to preview the pattern
   h2 Preview
   .sg-preview
-    = render 'styleguide/components/partials/breadcrumb'
+    // = render 'styleguide/components/partials/breadcrumb'
+    = PUGIN.get_component('modules/breadcrumb', { breadcrumbs: [{place: "Home", slug: ""}, {place: " Breadcrumbs", slug: "#{request.original_url}" }] })
 
 - content_for :markup do
   // Required if displaying a style, otherwise optional
-  h2 HTML Markup
+  h2 API Call
   .sg-markup
     pre
-      code.language-markup
-        = ukp_render_source 'layouts/pugin/modules/breadcrumb'
+      code.language-ruby
+        | = PUGIN.get_component('modules/breadcrumb', {
+              breadcrumbs: [
+                {place: "Home", slug: "#{request.host_with_port}"},
+                {place: " Breadcrumbs", slug: "#{request.original_url}" }]
+            })
 
 - content_for :feedback do
   // Required if displaying a style, otherwise optional
