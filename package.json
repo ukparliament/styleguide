@@ -7,7 +7,6 @@
     "test": "test"
   },
   "dependencies": {
-    "browser-sync": "^2.18.2",
     "font-awesome": "^4.7.0",
     "prismjs": "^1.5.1"
   },

@@ -4,7 +4,8 @@
     "./app/assets/javascripts"
   ],
   "js_vendor": [
-    "./node_modules/prismjs/prism.js"
+    "./node_modules/prismjs/prism.js",
+    "./node_modules/prismjs/components/prism-ruby.js"
   ],
   "images": [
     "./pugin/app/assets/images",
