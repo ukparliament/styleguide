@@ -2,27 +2,16 @@
 = PUGIN.get_component ('modules/header')
 
 /! Members : Breadcrumbs
-.c-fg
-  ol.crumb
-    li
-      a[href="#" title=""] House of Commons
-    li  
-      a[href="#" title=""] Members
+= PUGIN.get_component('modules/breadcrumb', {breadcrumbs: [{place: "House of Commons", slug: ""}, {place: "Members", slug: ""}]})
 
 /! Members : Profile Card
-.c-fg
-  h1 Name
-  dl
-    dt
-      h3 Constituency
-    dd
-      a[href="#" title=""] Constituency location
-  div
-    img[alt="Member Avatar" src== '/_img/avatar-116x175.png' width='116' height='175']
+= PUGIN.get_component('modules/card', {name: "FirstName Surname", info_title: "InfoTitle", info_url: "#{request.original_url}", info_description: "Description", img_src: "/_img/avatar-116x175.png"})
 
 /! Members : Party
 = PUGIN.get_component('modules/panel', {title: "Party", description: "Party Name"})
+
 /! Members : Contact Block
 = PUGIN.get_component('modules/contact', { address: [{Email: "Email Address", Phone: "Phone Number" , Address: "Street Address", Website: "Website"}]})
+
 /! Members : Footer
 = PUGIN.get_component ('modules/footer')
