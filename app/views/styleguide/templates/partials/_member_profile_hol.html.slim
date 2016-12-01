@@ -5,9 +5,9 @@
 = PUGIN.get_component('modules/breadcrumb', {breadcrumbs: [{place: "House of Lords", slug: ""}, {place: "Members", slug: ""}]})
 
 /! Members : Profile Card
-= PUGIN.get_component('modules/card', {name: "FirstName Surname", info_title: "InfoTitle", info_url: "#{request.original_url}", info_description: "Description", img_src: "/_img/avatar-116x175.png"})
+= PUGIN.get_component('modules/card', {name: "Member Name", info_title: "Info Title", info_url: "#{request.original_url}", info_description: "Info Description", img_src: "/_img/avatar-116x175.png"})
 
-/! Members Block : Areas of Interest
+/! Members : Areas of Interest
 .c-fg
   h3 Areas of interest
   p
@@ -19,13 +19,10 @@
       | ,
     a< [href="#" title=""] interest category
 
-/! Members Block : Party
+/! Members : Party
 = PUGIN.get_component('modules/panel', {title: "Party", description: "Party Name"})
 
-/! Members Block : Contact Statement
-= PUGIN.get_component('modules/panel', {title: "Contact", description: "What is the role of the Lords?"})
-
-/! Members Sub-Block : Contact Details
+/! Members : Contact Block
 = PUGIN.get_component('modules/contact', { address: [{Email: "Email Address", Phone: "Phone Number" , Address: "Street Address", Website: "Website", Twitter: "Twitter handle"}]})
 
 /! Members : Footer

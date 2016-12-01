@@ -49,7 +49,7 @@
     & > a {
       color: $grey80;
       text-decoration: none;
-      &:hover {
+      &:hover, &.active {
         color: $black;
         text-decoration: underline;
       }
