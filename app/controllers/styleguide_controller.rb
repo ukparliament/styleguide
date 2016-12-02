@@ -3,4 +3,9 @@ class StyleguideController < ApplicationController
 
   def index
   end
+
+  def test
+    render layout: "dyn_sub_layout"
+  end
+
 end
