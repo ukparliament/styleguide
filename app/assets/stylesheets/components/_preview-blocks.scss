@@ -1,14 +1,14 @@
 // Style Guide Preview & Markup Blocks
 
 .sg {
-  &-preview {
-    padding: $base-spacing-unit-tiny;
+  &-preview, &-markup {
     margin: 0 0 $base-spacing-unit-small 0;
     border: solid 1px $grey20;
   }
+  &-preview {
+    padding: $base-spacing-unit-tiny;
+  }
   &-markup {
     padding: 0 $base-spacing-unit-tiny;
-    margin: 0 0 $base-spacing-unit-small 0;
-    border: solid 1px $grey20;
   }
 }

@@ -1,5 +1,14 @@
 // Style Guide Layouts
 
-.sg {
+// Main Content Container
+
+.l-sgc {
+  @include span-columns(8);
   padding: 0 0 $base-spacing-unit 0;
+}
+
+// Right Navigation Container
+
+.l-sgm {
+  @include span-columns(4);
 }

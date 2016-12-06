@@ -1,6 +1,6 @@
 - content_for :body_main do
     .r
-      .l-8.sg
+      .l-sgc
         = content_for?(:page_heading) ? yield(:page_heading) : ''
 
         - (1..10).each do |i|
@@ -13,9 +13,10 @@
 
         = content_for?(:feedback) ? yield(:feedback) : ''
 
-      .l-4
+      .l-sgm
         = content_for?(:body_vr_nav) ? yield(:body_vr_nav) : render('layouts/nav_vr')
 
 // Render the root layout
 // By calling render file after the content_for blocks, the appropriate content gets sent up to the root layout and we get to use our core site styles.
 = render file: 'layouts/application'
+1
