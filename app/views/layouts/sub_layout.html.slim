@@ -9,6 +9,14 @@
 
         = content_for?(:markup) ? yield(:markup) : ''
 
+        // enable up to 'x' number of content_for for each content block
+        - (1..10).each do |i|
+          = content_for?(:"notes#{i}") ? yield(:"notes#{i}") : ''
+
+          = content_for?(:"preview#{i}") ? yield(:"preview#{i}") : ''
+
+          = content_for?(:"markup#{i}") ? yield(:"markup#{i}") : ''
+
         = content_for?(:feedback) ? yield(:feedback) : ''
 
       .l-sgm
