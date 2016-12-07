@@ -29,6 +29,4 @@ Rails.application.routes.draw do
     get 'templates/' + page, controller: 'templates', action: page
   end
 
-  get '/test' , to: 'styleguide#test'
-
 end
