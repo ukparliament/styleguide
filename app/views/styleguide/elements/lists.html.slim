@@ -1,6 +1,6 @@
 - content_for :head_title do
   // Required, title used for page and SEO
-  | Elements - Definition List
+  | Elements - Lists
 
 - content_for :body_header do
   // Optional, a fallback header will be applied
@@ -11,25 +11,55 @@
 
 - content_for :page_heading do
   // Required for page heading and SEO
-  h1 Definition List
+  h1 Lists
 
-- content_for :notes do
+- content_for :notes1 do
   // Optional
-  p This is an example of a basic definition list used on the UK Parliament websites.
-
-- content_for :preview do
+  h2 Definition List
+- content_for :preview1 do
   // Required to preview the pattern
-  h2 Preview
+  p Preview
   .sg-preview
-    = render 'styleguide/elements/partials/lists'
-
-- content_for :markup do
+    = render 'styleguide/elements/partials/lists/definitionlist'
+- content_for :markup1 do
   // Required if displaying a style, otherwise optional
-  h2 HTML Markup
+  p HTML Markup
   .sg-markup
     pre
       code.language-markup
-        = ukp_render_source 'styleguide/elements/partials/lists'
+        = ukp_render_source 'styleguide/elements/partials/lists/definitionlist'
+
+- content_for :notes2 do
+  // Optional
+  h2 Ordered List
+- content_for :preview2 do
+  // Required to preview the pattern
+  p Preview
+  .sg-preview
+    = render 'styleguide/elements/partials/lists/orderedlist'
+- content_for :markup2 do
+  // Required if displaying a style, otherwise optional
+  p HTML Markup
+  .sg-markup
+    pre
+      code.language-markup
+        = ukp_render_source 'styleguide/elements/partials/lists/orderedlist'
+
+- content_for :notes3 do
+  // Optional
+  h2 Un-ordered List
+- content_for :preview3 do
+  // Required to preview the pattern
+  p Preview
+  .sg-preview
+    = render 'styleguide/elements/partials/lists/unorderedlist'
+- content_for :markup3 do
+  // Required if displaying a style, otherwise optional
+  p HTML Markup
+  .sg-markup
+    pre
+      code.language-markup
+        = ukp_render_source 'styleguide/elements/partials/lists/unorderedlist'
 
 - content_for :feedback do
   // Required if displaying a style, otherwise optional
