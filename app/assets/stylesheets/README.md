@@ -1,4 +1,4 @@
-# ITCSS
+# Style Seperation Approach - ITCSS
 
 ITCSS stands for Inverted Triangle CSS and it helps you to organize your project CSS files in such way that you can better deal with (not always easy-to-deal with) CSS specifics like **global namespace, cascade and selectors specificity**.
 

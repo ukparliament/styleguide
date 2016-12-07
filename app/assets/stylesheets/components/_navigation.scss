@@ -19,10 +19,10 @@
     & > a {
       line-height: ($base-font-size + $base-spacing-unit);
       padding: ($base-spacing-unit-small - 2) $base-spacing-unit;
-      color: $grey80;
+      color: $grey50;
       border-right: solid 1px $grey15;
       text-decoration: none;
-      &:hover {
+      &:hover, &.active {
         color: $black;
         text-decoration: underline;
       }
@@ -47,9 +47,9 @@
       border-bottom: solid 1px $grey15;
     }
     & > a {
-      color: $grey80;
+      color: $grey50;
       text-decoration: none;
-      &:hover {
+      &:hover, &.active {
         color: $black;
         text-decoration: underline;
       }

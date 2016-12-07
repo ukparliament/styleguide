@@ -6,18 +6,18 @@
 @import "../../../pugin/app/assets/stylesheets/application";
 
 /* Components */
-@import "components/colour-palette.scss";
-@import "components/preview-blocks.scss";
+@import "components/colour-palette";
+@import "components/navigation";
+@import "components/preview-blocks";
 
-/* Generic */
-@import "generic/typography";
-@import "generic/shame";
+/* Elements */
+@import "elements/typography";
 
 /* Objects */
 @import "objects/layouts";
 
 /* Settings */
-@import "settings/navigation";
+@import "settings/spacing";
 
 /* Icon Fonts */
 $fa-font-path: '/_fonts';

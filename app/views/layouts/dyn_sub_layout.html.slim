@@ -3,14 +3,8 @@
       .l-sgc
         = content_for?(:page_heading) ? yield(:page_heading) : ''
 
-        = content_for?(:notes) ? yield(:notes) : ''
-
-        = content_for?(:preview) ? yield(:preview) : ''
-
-        = content_for?(:markup) ? yield(:markup) : ''
-
-        // enable up to 'x' number of content_for for each content block
         - (1..10).each do |i|
+          // enable up to 'x' number of content_for for each block of content
           = content_for?(:"notes#{i}") ? yield(:"notes#{i}") : ''
 
           = content_for?(:"preview#{i}") ? yield(:"preview#{i}") : ''
@@ -25,3 +19,4 @@
 // Render the root layout
 // By calling render file after the content_for blocks, the appropriate content gets sent up to the root layout and we get to use our core site styles.
 = render file: 'layouts/application'
+1

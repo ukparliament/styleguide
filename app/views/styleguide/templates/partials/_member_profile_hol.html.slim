@@ -1,20 +1,13 @@
-= render 'layouts/pugin/modules/header'
+/! Members : Header
+= PUGIN.get_component ('modules/header')
 
-/! Members Block : Breadcrumbs
-.c-fg
-  ol.crumb
-    li
-      a[href="#" title=""] House of Lords
-    li  
-      a[href="#" title=""] Members
+/! Members : Breadcrumbs
+= PUGIN.get_component('modules/breadcrumb', {breadcrumbs: [{place: "House of Lords", slug: ""}, {place: "Members", slug: ""}]})
 
-/! Members Block : Profile Headline
-.c-fg
-  h1 Title &amp; Name
-  div
-    img[alt="Member Avatar" src== '/_img/avatar-116x175.png' width='116' height='175']
+/! Members : Profile Card
+= PUGIN.get_component('modules/card', {name: "Member Name", info_title: "Info Title", info_url: "#{request.original_url}", info_description: "Info Description", img_src: "/_img/avatar-116x175.png"})
 
-/! Members Block : Areas of Interest
+/! Members : Areas of Interest
 .c-fg
   h3 Areas of interest
   p
@@ -26,34 +19,11 @@
       | ,
     a< [href="#" title=""] interest category
 
-/! Members Block : Party
-.c-fg
-  h3 Party
-  p
-    a[href="#" title=""] Party name
+/! Members : Party
+= PUGIN.get_component('modules/panel', {title: "Party", description: "Party Name"})
 
-/! Members Block : Contact Statement
-.c-fg
-  h3 Contact
-  p
-    a[href="#" title=""] What is the role of the Lords?
+/! Members : Contact Block
+= PUGIN.get_component('modules/contact', { address: [{Email: "Email Address", Phone: "Phone Number" , Address: "Street Address", Website: "Website", Twitter: "Twitter handle"}]})
 
-/! Members Sub-Block : Contact Details
-.c-fg
-  dl
-    dt Email:
-    dd
-      a[href="mailto:#" title=""] Email address
-    dt Tel:
-    dd
-      a[href="tel:#" title=""] Telephone number
-    dt Address:
-    dd Address text
-    dt Website:
-    dd
-      a[href="#" title=""] Website address
-    dt Twitter:
-    dd
-      a[href="#" title=""] Twitter handle
-
-= render 'layouts/pugin/modules/footer'
+/! Members : Footer
+= PUGIN.get_component ('modules/footer')
