@@ -1,4 +1,4 @@
-IMAGE = 165162103257.dkr.ecr.eu-west-1.amazonaws.com/designprototypes
+IMAGE = 165162103257.dkr.ecr.eu-west-1.amazonaws.com/styleguide
 
 # Construct the image tag.
 VERSION=0.1.$(GO_PIPELINE_COUNTER)
