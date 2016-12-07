@@ -2,22 +2,15 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'puma', '~> 3.0'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-# gem 'coffee-rails', '~> 4.2'
-# gem 'jquery-rails'
 
 gem 'pugin', path: './pugin'
 gem 'slim-rails'
-gem 'prism-rails'
-# gem 'high_voltage'
-# gem 'font-awesome-sass'
 gem 'htmlentities'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
-  gem'rails-controller-testing'
+  gem 'rails-controller-testing'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end

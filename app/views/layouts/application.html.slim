@@ -5,12 +5,12 @@ html lang="en"
     meta content="width=device-width, initial-scale=1.0" name="viewport"
     meta content="ie=edge" http-equiv="X-UA-Compatible"
     title = content_for?(:head_title) ? yield(:head_title) : "UK Parliament Style Guide"
-    // if css fails, run this command from the root dir "make css -C pugin"
+    // if css fails, run this command from the root dir "make build -C pugin"
     link rel="stylesheet" href="/_css/styleguide.css"
 
-  body
+  body.no-js
     = content_for?(:body_header) ? yield(:body_header) : render('layouts/pugin/modules/header')
-    
+
     .c-fg
       = content_for?(:body_hr_nav) ? yield(:body_hr_nav) : ''
 
@@ -19,4 +19,5 @@ html lang="en"
       = content_for?(:body_footer) ? yield(:body_footer) : render('layouts/pugin/modules/footer')
 
     = "\n"
-    = javascript_include_tag 'application'
+    script src="/_js/vendor.js"
+    script src="/_js/application.js"
