@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 IMAGE = 165162103257.dkr.ecr.eu-west-1.amazonaws.com/designprototypes
 
 # Construct the image tag.
