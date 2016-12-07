@@ -1,0 +1,27 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "styleguide",
+      "image": "165162103257.dkr.ecr.eu-west-1.amazonaws.com/styleguide",
+      "cpu": 10,
+      "memory": 256,
+      "essential": true,
+      "command": [],
+      "portMappings": [
+        {
+          "hostPort": 81,
+          "containerPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "styleguide",
+          "awslogs-region": "eu-west-1"
+        }
+      }
+    }
+  ],
+  "family": "styleguide"
+}
