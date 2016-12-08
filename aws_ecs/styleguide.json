@@ -9,7 +9,7 @@
       "command": [],
       "portMappings": [
         {
-          "hostPort": 81,
+          "hostPort": 86,
           "containerPort": 3000,
           "protocol": "tcp"
         }
