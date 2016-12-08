@@ -33,6 +33,6 @@ views
     └── index.html.slim               The default view of the Style guide controller (not necessarily the default page of the application as this can be changed within `config/routes.rb`)
 
 
-Pages are built using a combination of content_fo methods, partials and [PUGIN](https://github.com/ukparliament/pugin) API calls.
+Pages are built using a combination of content_for methods, partials and [PUGIN](https://github.com/ukparliament/pugin) API calls.
 
 When Rails renders a view as a response, it does so by combining the view with the current layout(s), in our case: view -> child layout -> base layout
