@@ -10,9 +10,9 @@ Style guide for UK Parliament
 
 ## Installation
 
-To install:
+Initial install:
 ```bash
-$ make install
+$ make setup
 ```
 
 To serve:
@@ -25,12 +25,15 @@ $ rails s
 Live reloading and synchronization with Browser-Sync, start your rails app with the above command then run the command below in another terminal instance:
 
 ```bash
-$ make browser-sync
+$ make browsersync -C pugin
+```
+
+To watch file for changes and recompile in real-time, run:
+```bash
+$ make watch -C pugin
 ```
 
 By default this watch for `app/assets` and `app/views`. You can also add more files to watch or change the host or port.
-
-It is done in `Makefile`.
 
 ## Licence
 This microservice is available under the [Open Parliament Licence](http://www.parliament.uk/site-information/copyright/open-parliament-licence/).
