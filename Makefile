@@ -30,4 +30,3 @@ setup:
 	~/.rbenv/shims/bundle
 	@npm i
 	@make install -C pugin
-	@make build -C pugin
