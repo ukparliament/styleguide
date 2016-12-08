@@ -2,8 +2,7 @@
 
 .mnu-hrz, .mnu-vrt {
   background-color: $grey05;
-  border: solid 1px $grey20;
-  margin: $base-spacing-unit-small 0 0 0;
+  color: $grey50;
   & > ul {
     margin: 0;
     padding: 0;
@@ -13,14 +12,11 @@
 
 // Horizontal Navigation Block
 
-.mnu-hrz ul {
-  & > li {
-    display: inline;
-    & > a {
-      line-height: ($base-font-size + $base-spacing-unit);
-      padding: ($base-spacing-unit-small - 2) $base-spacing-unit;
+.mnu-hrz {
+  margin: $base-spacing-unit-tiny 0;
+  & > ul {
+    & > li > a {
       color: $grey50;
-      border-right: solid 1px $grey15;
       text-decoration: none;
       &:hover, &.active {
         color: $black;
@@ -28,12 +24,48 @@
       }
     }
   }
+  // Mobile View
+  @include media($mobile) {
+    @include span-columns(4);
+    @include shift(0);
+    & > ul {
+      & > li {
+        line-height: 1.5;
+        font-size: 14px;
+        border-bottom: solid 1px $grey20;
+        padding-left: $base-spacing-unit-small;
+      }
+      & > li:first-child {
+        border-top: solid 1px $grey20;
+      }
+    }
+  }
+  // Tablet & Desktop View
+  @include media($tablet) {
+    border: solid 1px $grey20;
+    @include span-columns(9.8);
+    @include shift(0.1);
+    & > ul > li {
+      display: inline;
+      border-right: solid 1px $grey15;
+      & > a {
+        line-height: ($base-font-size + $base-spacing-unit);
+        padding: ($base-spacing-unit-small - 2) $base-spacing-unit;
+      }
+    }
+  }
+  // Widescreen View
+  @include media($widescreen) {
+    @include span-columns(12);
+    @include shift(0);
+  }
 }
 
 // Vertical Navigation Block
 
 .mnu-vrt {
   padding: $base-spacing-unit;
+  border: solid 1px $grey20;
   & > h4 {
     padding: 0 0 $base-spacing-unit 0;
     margin: 0;
@@ -54,5 +86,13 @@
         text-decoration: underline;
       }
     }
+  }
+  // Mobile View
+  @include media($mobile) {
+    margin: $base-spacing-unit 0 $base-spacing-unit-large 0;
+  }
+  // Tablet, Desktop & Widescreen View
+  @include media($tablet) {
+    margin: $base-spacing-unit 0 $base-spacing-unit-large 0;
   }
 }
