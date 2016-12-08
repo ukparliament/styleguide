@@ -1,14 +1,54 @@
-// Style Guide Layouts
-
-// Main Content Container
+// Content Block Container
 
 .l-sgc {
-  @include span-columns(8);
   padding: 0 0 $base-spacing-unit 0;
+  // Mobile View
+  @include media($mobile) {
+    @include span-columns(3.7);
+    @include shift(0.15);
+  }
+  // Tablet View
+  @include media($tablet) {
+    @include span-columns(9.5);
+    @include shift(0.25);
+  }
+  // Desktop View
+  @include media($desktop) {
+    @include span-columns(7.9);
+    @include shift(0.1);
+  }
+  // Widescreen View
+  @include media($widescreen) {
+    @include span-columns(8);
+    @include shift(0);
+  }
 }
 
-// Right Navigation Container
+// Navigation Block Container
 
 .l-sgm {
-  @include span-columns(4);
+  // Mobile View
+  @include media($mobile) {
+    @include span-columns(3.7);
+    @include shift(0.15);
+    @include omega();
+  }
+  // Tablet View
+  @include media($tablet) {
+    @include span-columns(9.5);
+    @include shift(0.25);
+    @include omega();
+  }
+  // Desktop View
+  @include media($desktop) {
+    @include span-columns(3.87);
+    @include shift(0);
+    @include omega();
+  }
+  // Widescreen View
+  @include media($widescreen) {
+    @include span-columns(4);
+    @include shift(0);
+    @include omega();
+  }
 }

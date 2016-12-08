@@ -1,7 +1,6 @@
 // Style Guide Colour Palette
 
-.sg-col {
-  @include span-columns (2);
+.sg-colour {
   & > p {
     width: 100%;
     height: 100px;
@@ -16,6 +15,22 @@
       font-size: 15px;
       text-align: center;
     }
+    & > li:last-child {
+      padding: 0 0 $base-spacing-unit-tiny 0;
+    }
+  }
+  // Mobile View
+  @include media($mobile) {
+    @include span-columns (4);
+  }
+  // Tablet View
+  @include media($tablet) {
+    @include span-columns (3.33);
+    @include omega(3n);
+  }
+  // Desktop & Widescreen View
+  @include media($desktop) {
+    @include span-columns (4);
   }
 }
 
