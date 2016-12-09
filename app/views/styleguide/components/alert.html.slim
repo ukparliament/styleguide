@@ -1,0 +1,94 @@
+- content_for :head_title do
+  // Required, title used for page and SEO
+  | Components - Alerts
+
+- content_for :body_header do
+  // Optional, a fallback header will be applied
+
+- content_for :body_hr_nav do
+  // Optional
+  = render 'layouts/nav_hr'
+
+- content_for :page_heading do
+  // Required for page heading and SEO
+  h1 Alerts
+
+- content_for :notes do
+  // Optional
+  p These are alert message components that should be used on all public facing UK Parliament websites.
+
+- content_for :notes1 do
+  h2 Standard Alert
+- content_for :preview1 do
+  h3 Preview
+  .sg-preview
+    = render 'styleguide/components/partials/alerts/standard'
+- content_for :markup1 do
+  h3 HTML Markup
+  .sg-markup
+    pre
+      code.language-markup
+        = ukp_render_source 'styleguide/components/partials/alerts/standard'
+
+- content_for :notes2 do
+  h2 Information Alert
+- content_for :preview2 do
+  h3 Preview
+  .sg-preview
+    = render 'styleguide/components/partials/alerts/information'
+- content_for :markup2 do
+  h3 HTML Markup
+  .sg-markup
+    pre
+      code.language-markup
+        = ukp_render_source 'styleguide/components/partials/alerts/information'
+
+- content_for :notes3 do
+  h2 Success Alert
+- content_for :preview3 do
+  h3 Preview
+  .sg-preview
+    = render 'styleguide/components/partials/alerts/success'
+- content_for :markup3 do
+  h3 HTML Markup
+  .sg-markup
+    pre
+      code.language-markup
+        = ukp_render_source 'styleguide/components/partials/alerts/success'
+
+- content_for :notes4 do
+  h2 Warning Alert
+- content_for :preview4 do
+  h3 Preview
+  .sg-preview
+    = render 'styleguide/components/partials/alerts/warning'
+- content_for :markup4 do
+  h3 HTML Markup
+  .sg-markup
+    pre
+      code.language-markup
+        = ukp_render_source 'styleguide/components/partials/alerts/warning'
+
+- content_for :notes5 do
+  h2 Error Alert
+- content_for :preview5 do
+  h3 Preview
+  .sg-preview
+    = render 'styleguide/components/partials/alerts/error'
+- content_for :markup5 do
+  h3 HTML Markup
+  .sg-markup
+    pre
+      code.language-markup
+        = ukp_render_source 'styleguide/components/partials/alerts/error'
+
+- content_for :feedback do
+  // Required if displaying a style, otherwise optional
+  = render 'styleguide/_shared/feedback'
+
+- content_for :nav_vr_section do
+  // Required for sectioned pages (design, components, etc) - optional for others
+  = render 'layouts/nav_vr_components'
+
+- content_for :body_footer do
+  // Optional, a fallback footer will be applied
