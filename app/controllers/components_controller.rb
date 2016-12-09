@@ -1,6 +1,10 @@
 class ComponentsController < ApplicationController
   layout "sub_layout"
 
+  def a_z
+    render template: "styleguide/components/a-z"
+  end
+
   def breadcrumb
     render template: "styleguide/components/breadcrumb"
   end
