@@ -1,16 +1,19 @@
 // Style Guide Typography
 
 .l-sgc {
-  & > h1 {
-    font-size: 32px;
+  & > h1, & > h2, & > h3 {
     line-height: 1.5;
     padding: $base-spacing-unit-small 0;
   }
+  & > h1 {
+    font-size: 32px;
+  }
   & > h2 {
     font-size: 26px;
-    line-height: 1.5;
     color: $grey75;
-    padding: $base-spacing-unit-small 0;
+  }
+  & > h3 {
+    font-size: 18px;
   }
   & > p {
     font-size: 16px;

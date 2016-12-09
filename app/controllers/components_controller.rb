@@ -4,6 +4,10 @@ class ComponentsController < ApplicationController
   def a_z
     render template: "styleguide/components/a-z"
   end
+  
+  def alert
+    render template: "styleguide/components/alert"
+  end
 
   def breadcrumb
     render template: "styleguide/components/breadcrumb"
