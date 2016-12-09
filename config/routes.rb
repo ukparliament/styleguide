@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   end
 
   get '/elements', to: redirect('/elements/table', status: 302)
-  elements = %w(forms lists table)
+  elements = %w(forms media lists table)
   elements.each do |page|
     get 'elements/' + page, controller: 'elements', action: page
   end

@@ -5,6 +5,10 @@ class ElementsController < ApplicationController
     render template: "styleguide/elements/forms"
   end
 
+  def media
+    render template: "styleguide/elements/media"
+  end
+
   def lists
     render template: "styleguide/elements/lists"
   end
