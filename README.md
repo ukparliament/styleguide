@@ -6,7 +6,7 @@ Style guide for UK Parliament
 
 * Ruby 2.3.1
 * Rails 5.0.0.1
-* Nodejs
+* Nodejs 7.1.0
 
 ## Installation
 
