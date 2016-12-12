@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   #    HTTP verb 'Path',      'Controller#Action',    'Path'
   get '/components', to: redirect('/components/header', status: 302)
-  components = %w(a_z alert breadcrumb footer header pagination panel)
+  components = %w(a_z alert breadcrumb footer header panel)
   components.each do |page|
     get 'components/' + page, controller: 'components', action: page
   end
