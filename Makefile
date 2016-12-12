@@ -26,7 +26,7 @@ deploy-ecs-ci:
 
 setup:
 	@git submodule init
-	@git submodule update
-	@bundle
+	@git submodule update --remote
+	~/.rbenv/shims/bundle
 	@npm i
 	@make install -C pugin

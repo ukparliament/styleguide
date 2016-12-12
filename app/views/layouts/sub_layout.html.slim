@@ -18,7 +18,7 @@
           = content_for?(:"markup#{i}") ? yield(:"markup#{i}") : ''
 
         = content_for?(:feedback) ? yield(:feedback) : ''
-
+      
       .l-sgm
         = content_for?(:body_vr_nav) ? yield(:body_vr_nav) : render('layouts/nav_vr')
 

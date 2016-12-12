@@ -1,11 +1,13 @@
 class DesignController < ApplicationController
   layout "sub_layout"
 
+  @@view_path = "styleguide/design/"
+
   def colours
-    render template: "styleguide/design/colours"
+    render template: @@view_path + "colours"
   end
 
   def typography
-    render template: "styleguide/design/typography"
+    render template: @@view_path + "typography"
   end
 end

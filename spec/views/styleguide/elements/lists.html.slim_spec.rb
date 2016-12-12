@@ -9,7 +9,9 @@ RSpec.describe "styleguide/elements/lists.html.slim", type: :view do
     end
     # Repeat for each partial
     it "rendered partial" do
-      expect(response.body).to render_template(partial: "_lists")
+      expect(response.body).to render_template(partial: "_definitionlist")
+      expect(response.body).to render_template(partial: "_orderedlist")
+      expect(response.body).to render_template(partial: "_unorderedlist")
     end
     it "rendered partial" do
       expect(response.body).to render_template(partial: "_nav_hr")
@@ -18,7 +20,7 @@ RSpec.describe "styleguide/elements/lists.html.slim", type: :view do
       expect(response.body).to render_template(partial: "_nav_vr_elements")
     end
     it "rendered view includes '#WordorPhrase'" do
-      expect(response.body).to include("List")
+      expect(response.body).to include("Lists")
     end
   end
 

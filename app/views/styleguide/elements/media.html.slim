@@ -1,6 +1,6 @@
 - content_for :head_title do
   // Required, title used for page and SEO
-  | Elements - Lists
+  | Elements - Media
 
 - content_for :body_header do
   // Optional, a fallback header will be applied
@@ -11,55 +11,64 @@
 
 - content_for :page_heading do
   // Required for page heading and SEO
-  h1 Lists
+  h1 Media
 
 - content_for :notes1 do
   // Optional
-  h2 Definition List
+  h2 Video (HTML 5)
 - content_for :preview1 do
   // Required to preview the pattern
   h3 Preview
   .sg-preview
-    = render 'styleguide/elements/partials/lists/definitionlist'
+    = render 'styleguide/elements/partials/media/video'
 - content_for :markup1 do
   // Required if displaying a style, otherwise optional
   h3 HTML Markup
   .sg-markup
     pre
       code.language-markup
-        = ukp_render_source 'styleguide/elements/partials/lists/definitionlist'
+        = ukp_render_source 'styleguide/elements/partials/media/video'
 
 - content_for :notes2 do
   // Optional
-  h2 Ordered List
+  h2 Video (YouTube)
+  p
+  | All externally embedd video should be wrapped with a class of
+  strong  ".video-wrap"
+
 - content_for :preview2 do
   // Required to preview the pattern
   h3 Preview
   .sg-preview
-    = render 'styleguide/elements/partials/lists/orderedlist'
+    .video-wrap
+      iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube-nocookie.com/embed/0p3-v0rp1rc" width="640"
+
 - content_for :markup2 do
   // Required if displaying a style, otherwise optional
   h3 HTML Markup
   .sg-markup
     pre
       code.language-markup
-        = ukp_render_source 'styleguide/elements/partials/lists/orderedlist'
+        script
+          .video-wrap
+            iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube-nocookie.com/embed/0p3-v0rp1rc" width="640"
+
 
 - content_for :notes3 do
   // Optional
-  h2 Un-ordered List
+  h2 Audio
 - content_for :preview3 do
   // Required to preview the pattern
   h3 Preview
   .sg-preview
-    = render 'styleguide/elements/partials/lists/unorderedlist'
+    = render 'styleguide/elements/partials/media/audio'
 - content_for :markup3 do
   // Required if displaying a style, otherwise optional
   h3 HTML Markup
   .sg-markup
     pre
       code.language-markup
-        = ukp_render_source 'styleguide/elements/partials/lists/unorderedlist'
+        = ukp_render_source 'styleguide/elements/partials/media/audio'
 
 - content_for :feedback do
   // Required if displaying a style, otherwise optional

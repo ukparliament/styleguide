@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   #    HTTP verb 'Path',      'Controller#Action',    'Path'
   get '/components', to: redirect('/components/header', status: 302)
-  components = %w(breadcrumb footer header panel)
+  components = %w(a_z alert breadcrumb footer header pagination panel)
   components.each do |page|
     get 'components/' + page, controller: 'components', action: page
   end
@@ -17,8 +17,8 @@ Rails.application.routes.draw do
     get 'design/' + page, controller: 'design', action: page
   end
 
-  get '/elements', to: redirect('/elements/table', status: 302)
-  elements = %w(lists table)
+  get '/elements', to: redirect('/elements/forms', status: 302)
+  elements = %w(forms media lists table)
   elements.each do |page|
     get 'elements/' + page, controller: 'elements', action: page
   end
