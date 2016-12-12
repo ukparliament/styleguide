@@ -1,0 +1,13 @@
+nav aria-label="Paged navigation"
+  ul.pagination
+    li.prev
+      a href="#" Previous
+    - (1..8).each do |number|
+      - if "#{number}" == "3"
+        li.active
+          a href="#" #{number}
+      - else
+        li
+          a href="#" #{number}
+    li.next
+      a href="#" Next
