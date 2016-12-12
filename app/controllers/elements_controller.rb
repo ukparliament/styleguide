@@ -1,19 +1,21 @@
 class ElementsController < ApplicationController
   layout "sub_layout"
 
+  @@view_path = "styleguide/elements/"
+
   def forms
-    render template: "styleguide/elements/forms"
+    render template: @@view_path + "forms"
   end
 
   def media
-    render template: "styleguide/elements/media"
+    render template: @@view_path + "media"
   end
 
   def lists
-    render template: "styleguide/elements/lists"
+    render template: @@view_path + "lists"
   end
 
   def table
-    render template: "styleguide/elements/table"
+    render template: @@view_path + "table"
   end
 end

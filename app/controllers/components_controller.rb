@@ -1,27 +1,29 @@
 class ComponentsController < ApplicationController
   layout "sub_layout"
 
+  @@view_path = "styleguide/components/"
+
   def a_z
-    render template: "styleguide/components/a-z"
+    render template: @@view_path + "a-z"
   end
-  
+
   def alert
-    render template: "styleguide/components/alert"
+    render template: @@view_path + "alert"
   end
 
   def breadcrumb
-    render template: "styleguide/components/breadcrumb"
+    render template: @@view_path + "breadcrumb"
   end
 
   def footer
-    render template: "styleguide/components/footer"
+    render template: @@view_path + "footer"
   end
 
   def header
-    render template: "styleguide/components/header"
+    render template: @@view_path + "header"
   end
 
   def panel
-    render template: "styleguide/components/panel"
+    render template: @@view_path + "panel"
   end
 end
