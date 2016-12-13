@@ -11,6 +11,10 @@ class ComponentsController < ApplicationController
     render template: @@view_path + "alert"
   end
 
+  def badges
+    render template: @@view_path + "badges"
+  end
+
   def breadcrumb
     render template: @@view_path + "breadcrumb"
   end
