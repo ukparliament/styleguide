@@ -7,6 +7,12 @@
   }
   &-preview {
     padding: $base-spacing-unit-tiny;
+    & > ul, & > ol {
+      margin: $base-spacing-unit-tiny 0 0 $base-spacing-unit;
+    }
+    & > dl {
+      margin: 0 0 0 $base-spacing-unit-small;
+    }
   }
   &-markup {
     padding: 0 $base-spacing-unit-tiny;
