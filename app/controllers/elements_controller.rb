@@ -7,12 +7,12 @@ class ElementsController < ApplicationController
     render template: @@view_path + "forms"
   end
 
-  def media
-    render template: @@view_path + "media"
-  end
-
   def lists
     render template: @@view_path + "lists"
+  end
+
+  def media
+    render template: @@view_path + "media"
   end
 
   def table
