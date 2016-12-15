@@ -5,13 +5,24 @@
 = PUGIN.get_component('modules/breadcrumb', {breadcrumbs: [{place: "House of Commons", slug: ""}, {place: "Members", slug: ""}]})
 
 /! Members : Profile Card
-= PUGIN.get_component('modules/card', {name: "Member Name", info_title: "Constituency", info_url: "#{request.original_url}", info_description: "Constituency location", img_src: "/_img/avatar-116x175.png"})
+= PUGIN.get_component('modules/card', { \
+   title: "Member Name", \
+   image: [{ src: "http://wraggelabs.com/static/images/default_avatar-2.gif", \
+             alt: "Member Name" \
+          }], \
+   details: [{ title: "House: ", description: "House Of Commons"}, \
+             { title: "Party: ", description: "Party Name"}, \
+             { title: "Constituency: ", description: "Constituency Location" }] \
+  })
 
-/! Members : Party
-= PUGIN.get_component('modules/panel', {title: "Party", description: "Party Name"})
-
-/! Members : Contact Block
-= PUGIN.get_component('modules/contact', { address: [{Email: "Email Address", Phone: "Phone Number" , Address: "Street Address", Website: "Website", Twitter: "Twitter Handle"}]})
+/! Members : Contact Details
+= PUGIN.get_component('modules/contact', { is_mp: true, \
+                                             address: [title: "Parliamentary Address",  \
+                                                       email: "Email Address", \
+                                                       phone: "Phone Number", \
+                                                       address: "Street Address", \
+                                                      ] \
+                                          })
 
 /! Members : Footer
 = PUGIN.get_component ('modules/footer')
