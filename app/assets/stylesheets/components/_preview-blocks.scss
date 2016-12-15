@@ -7,11 +7,16 @@
   }
   &-preview {
     padding: $base-spacing-unit-tiny;
-    & > ul, & > ol {
+    & > ul,
+    & > ol {
       margin: $base-spacing-unit-tiny 0 0 $base-spacing-unit;
     }
     & > dl {
       margin: 0 0 0 $base-spacing-unit-small;
+    }
+    & > nav > ul.pagination {
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
   &-markup {

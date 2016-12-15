@@ -48,13 +48,15 @@
       code.language-ruby
         | // Members Profile Card
         
-          = PUGIN.get_component('modules/card', { 
-                name: "Member Name",
-                info_title: "Info Title",
-                info_description: "Info Description",
-                info_url: "",
-                img_src: "/_img/avatar-116x175.png"
-              })
+          = PUGIN.get_component('modules/card', { \
+             title: "Member Name", \
+             image: [{ src: "http://wraggelabs.com/static/images/default_avatar-2.gif", \
+                       alt: "Member Name" \
+                    }], \
+             details: [{ title: "House: ", description: "House Of Lords"}, \
+                       { title: "Party: ", description: "Party Name"}, \
+                       { title: "Constituency: ", description: "Constituency Location" }] \
+            })
   .sg-markup
     pre
       code.language-markup
@@ -74,26 +76,16 @@
   .sg-markup
     pre
       code.language-ruby
-        | // Members Party
-        
-          = PUGIN.get_component('modules/panel', {
-                title: "Party",
-                description: "Party Name"
-              })
-  .sg-markup
-    pre
-      code.language-ruby
         | // Members Contact Details
         
-          = PUGIN.get_component('modules/contact', {
-                address: [{
-                    Email: "Email Address",
-                    Phone: "Phone Number" ,
-                    Address: "Street Address",
-                    Website: "Website URL",
-                    Twitter: "Twitter Handle"
-                }]
-              })
+          = PUGIN.get_component('modules/contact', { \
+            is_mp: false, \
+            address: [title: "Parliamentary Address",  \
+                      email: "Email Address", \
+                      phone: "Phone Number", \
+                      address: "Street Address", \
+                     ] \
+            })
   .sg-markup
     pre
       code.language-ruby
