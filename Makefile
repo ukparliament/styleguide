@@ -15,8 +15,8 @@ build:
 push:
 	docker push $(IMAGE):$(VERSION)
 	docker push $(IMAGE):latest
-#	docker rmi $(IMAGE):$(VERSION)
-#	docker rmi $(IMAGE):latest
+	docker rmi $(IMAGE):$(VERSION)
+	docker rmi $(IMAGE):latest
 
 # http://serverfault.com/questions/682340/update-the-container-of-a-service-in-amazon-ecs?rq=1
 deploy-ecs-ci:
