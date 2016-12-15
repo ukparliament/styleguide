@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   end
 
   get '/templates', to: redirect('/templates/member_profile_hoc', status: 302)
-  templates = %w(member_profile_hoc member_profile_hol)
+  templates = %w(member_profile_hoc member_profile_hol member_search_results)
   templates.each do |page|
     get 'templates/' + page, controller: 'templates', action: page
   end
