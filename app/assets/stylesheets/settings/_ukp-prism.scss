@@ -1,0 +1,73 @@
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #000;
+  font-size: 16px;
+  text-shadow: 0 1px white;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #fcfcfc;
+}
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #fcfcfc;
+}
+
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #fcfcfc;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata,
+.token.punctuation {
+  color: #747474;
+}
+.token.attr-name,
+.token.char,
+.token.builtin,
+.token.inserted,
+.token.function,
+.token.property {
+  color: #568100;
+}
+
+.token.regex,
+.token.important,
+.token.atrule,
+.language-scss .token.keyword,
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #956e48;
+}
+
+.token.attr-value,
+.token.string,
+.token.variable {
+  color: #568100;
+}
