@@ -5,7 +5,7 @@
 = PUGIN.get_component('modules/breadcrumb', {breadcrumbs: [{place: "House of Lords", slug: ""}, {place: "Members", slug: ""}]})
 
 /! Members : Profile Card
-=> PUGIN.get_component('modules/card', { \
+= PUGIN.get_component('modules/card', { \
    title: "Member Name", \
    image: [{ src: "http://wraggelabs.com/static/images/default_avatar-2.gif", \
              alt: "Member Name" \
@@ -15,23 +15,19 @@
              { title: "Constituency: ", description: "Constituency Location" }] \
   })
 
-/! Members : Profile Card
-= PUGIN.get_component('modules/card', {name: "Member Name", info_title: "Info Title", info_url: "#{request.original_url}", info_description: "Info Description", img_src: "/_img/avatar-116x175.png"})
-
 /! Members : Areas of Interest
-.c-fg
-  h3 Areas of interest
-  p
-    a[href="#" title=""] interest category
-    span
-      | ,
-    a< [href="#" title=""] interest category
-    span
-      | ,
-    a< [href="#" title=""] interest category
+h2 Areas of interest
+p
+  a[href="#" title=""] interest category
+  span
+    | ,
+  a< [href="#" title=""] interest category
+  span
+    | ,
+  a< [href="#" title=""] interest category
 
 /! Members : Contact Details
-= PUGIN.get_component('modules/contact', { is_mp: false, \
+= PUGIN.get_component('modules/contact', { is_mp: true, \
                                              address: [title: "Parliamentary Address",  \
                                                        email: "Email Address", \
                                                        phone: "Phone Number", \

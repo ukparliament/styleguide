@@ -15,7 +15,7 @@
 
 - content_for :notes do
   // Optional
-  p This is an example of a House of Lords members card template used on the UK Parliament websites.
+  p This is an example of a House of Lords members profile card.
 
 - content_for :preview do
   // Required to preview the pattern
@@ -62,16 +62,15 @@
       code.language-markup
         | // Areas of Interest
         
-          .c-fg
-            h3 Areas of interest
-            p
-              a[href="#" title=""] interest category
-              span
-                | ,
-              a[href="#" title=""] interest category
-              span
-                | ,
-              a[href="#" title=""] interest category
+          h2 Areas of interest
+          p
+            a[href="#" title=""] interest category
+            span
+              | ,
+            a[href="#" title=""] interest category
+            span
+              | ,
+            a[href="#" title=""] interest category
 
   .sg-markup
     pre
@@ -79,7 +78,7 @@
         | // Members Contact Details
         
           = PUGIN.get_component('modules/contact', { \
-            is_mp: false, \
+            is_mp: true, \
             address: [title: "Parliamentary Address",  \
                       email: "Email Address", \
                       phone: "Phone Number", \
