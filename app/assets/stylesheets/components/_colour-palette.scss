@@ -11,12 +11,12 @@
     margin: 0;
     padding: 0;
     & > li {
-      padding: $base-spacing-unit-tiny 0 0;
-      font-size: 15px;
+      padding-top: $base-spacing-unit-tiny;
+      @include fontsize(14);
       text-align: center;
     }
     & > li:last-child {
-      padding: 0 0 $base-spacing-unit-tiny 0;
+      padding-bottom: $base-spacing-unit-tiny;
     }
   }
   // Mobile View
