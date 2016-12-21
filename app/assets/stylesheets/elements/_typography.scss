@@ -1,26 +1,59 @@
 // Style Guide Typography
 
 .l-sgc {
-  & > h1, & > h2, & > h3 {
-    line-height: 1.5;
-    padding: $base-spacing-unit-small 0;
+  & > h1,
+  & > h2,
+  & > h3 {
+    padding-top: $base-spacing-unit-small;
+    padding-bottom: $base-spacing-unit-small;
   }
   & > h1 {
-    font-size: 32px;
+    @include media($mobile) {
+      @include fontsize(22);
+    }
+    @include media($tablet) {
+      @include fontsize(28);
+    }
+    @include media($desktop) {
+      @include fontsize(32);
+    }
   }
   & > h2 {
-    font-size: 26px;
     color: $grey75;
+    @include media($mobile) {
+      @include fontsize(20);
+    }
+    @include media($tablet) {
+      @include fontsize(24);
+    }
+    @include media($desktop) {
+      @include fontsize(26);
+    }
   }
   & > h3 {
-    font-size: 18px;
+    @include media($mobile) {
+      @include fontsize(16);
+    }
+    @include media($tablet) {
+      @include fontsize(20);
+    }
+    @include media($desktop) {
+      @include fontsize(22);
+    }
   }
   & > p {
-    font-size: 16px;
-    line-height: 1.5;
-    padding: 0 0 $base-spacing-unit-small 0;
+    padding-bottom: $base-spacing-unit-small;
+    @include media($mobile) {
+      @include fontsize(12);
+    }
+    @include media($tablet) {
+      @include fontsize(14);
+    }
+    @include media($desktop) {
+      @include fontsize(16);
+    }
   }
   & i {
-    margin: 0 $base-spacing-unit-tiny 0 0;
+    margin-right: $base-spacing-unit-tiny;
   }
 }
