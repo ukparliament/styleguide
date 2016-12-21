@@ -1,25 +1,32 @@
 // Style Guide Preview & Markup Blocks
+// Also holds overides for components, elements, etc
 
 .sg {
   &-preview, &-markup {
-    margin: 0 0 $base-spacing-unit-small 0;
+    margin-bottom: $base-spacing-unit-small;
     border: solid 1px $grey20;
   }
   &-preview {
     padding: $base-spacing-unit-tiny;
     & > ul,
     & > ol {
-      margin: $base-spacing-unit-tiny 0 0 $base-spacing-unit;
+      margin-top: $base-spacing-unit-tiny;
+      margin-left: $base-spacing-unit;
     }
     & > dl {
-      margin: 0 0 0 $base-spacing-unit-small;
+      margin-left: $base-spacing-unit-small;
     }
     & > nav > ul.pagination {
       margin-top: 0;
       margin-bottom: 0;
     }
+    & .hdr-lgo {
+      width: auto;
+      margin-right: $base-spacing-unit-small;
+    }
   }
   &-markup {
-    padding: 0 $base-spacing-unit-tiny;
+    padding-left: $base-spacing-unit-tiny;
+    padding-right: $base-spacing-unit-tiny;
   }
 }

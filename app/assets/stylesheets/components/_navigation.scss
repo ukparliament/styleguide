@@ -1,24 +1,27 @@
 // Navigation Blocks Shared
 
-.mnu-hrz, .mnu-vrt {
+.mnu-hrz,
+.mnu-vrt {
   background-color: $grey05;
   color: $grey50;
   & > ul {
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style-image: none;
   }
 }
 
 // Horizontal Navigation Block
 
 .mnu-hrz {
-  margin: $base-spacing-unit-tiny 0;
+  margin-top: $base-spacing-unit-tiny;
+  margin-bottom: $base-spacing-unit-tiny;
   & > ul {
     & > li > a {
-      color: darken($grey50, 50%);
+      color: $grey80;
       text-decoration: none;
-      &:hover, &.active {
+      &:hover,
+      &.active {
         color: $black;
         text-decoration: underline;
       }
@@ -30,10 +33,10 @@
     @include shift(0);
     & > ul {
       & > li {
-        line-height: 1.5;
-        font-size: 14px;
         border-bottom: solid 1px $grey20;
         padding-left: $base-spacing-unit-small;
+        padding-top: $base-spacing-unit-tiny;
+        padding-bottom: $base-spacing-unit-tiny;
       }
       & > li:first-child {
         border-top: solid 1px $grey20;
@@ -46,7 +49,7 @@
     @include span-columns(9.8);
     @include shift(0.1);
     & > ul > li {
-      display: inline;
+      display: inline-block;
       border-right: solid 1px $grey15;
       & > a {
         line-height: ($base-font-size + $base-spacing-unit);
@@ -67,21 +70,23 @@
   padding: $base-spacing-unit;
   border: solid 1px $grey20;
   & > h3 {
-    padding: 0 0 $base-spacing-unit 0;
     margin: 0;
+    padding-bottom: $base-spacing-unit;
     color: $grey100;
   }
   & ul > li {
     display: block;
-    padding: $base-spacing-unit-tiny 0;
+    padding-top: $base-spacing-unit-tiny;
+    padding-bottom: $base-spacing-unit-tiny;
     border-top: solid 1px $grey15;
     &:last-child {
       border-bottom: solid 1px $grey15;
     }
     & > a {
-      color: darken($grey50, 50%);
+      color: $grey80;
       text-decoration: none;
-      &:hover, &.active {
+      &:hover,
+      &.active {
         color: $black;
         text-decoration: underline;
       }
@@ -89,10 +94,12 @@
   }
   // Mobile View
   @include media($mobile) {
-    margin: $base-spacing-unit 0 $base-spacing-unit-large 0;
+    margin-top: $base-spacing-unit;
+    margin-bottom: $base-spacing-unit-large;
   }
   // Tablet, Desktop & Widescreen View
   @include media($tablet) {
-    margin: $base-spacing-unit 0 $base-spacing-unit-large 0;
+    margin-top: $base-spacing-unit;
+    margin-bottom: $base-spacing-unit-large;
   }
 }

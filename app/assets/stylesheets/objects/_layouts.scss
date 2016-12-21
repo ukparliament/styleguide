@@ -1,7 +1,7 @@
 // Content Block Container
 
 .l-sgc {
-  padding: 0 0 $base-spacing-unit 0;
+  padding-bottom: $base-spacing-unit;
   // Mobile View
   @include media($mobile) {
     @include span-columns(3.7);
