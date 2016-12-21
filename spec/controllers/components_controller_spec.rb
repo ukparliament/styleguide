@@ -86,16 +86,4 @@ RSpec.describe ComponentsController, type: :controller do
     end
   end
 
-  describe "GET panel" do
-    before(:each) do
-      get :panel
-    end
-    it "returns http success" do
-      expect(response).to have_http_status(:success)
-    end
-    it "rendered using the correct template" do
-      expect(response).to render_template("styleguide/components/panel")
-    end
-  end
-
 end
