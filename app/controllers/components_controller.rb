@@ -30,8 +30,4 @@ class ComponentsController < ApplicationController
   def pagination
     render template: @@view_path + "pagination"
   end
-
-  def panel
-    render template: @@view_path + "panel"
-  end
 end
