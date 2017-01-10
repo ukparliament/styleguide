@@ -9,7 +9,7 @@ The float based grid system used for layout is Bourbon Neat 1.8.0 (http://neat.b
 Detailed information on the using the Pugin grid system can be found by reading the following documents in your Pugin submodule:
 
 1. Pugin bespoke grid system - 'pugin/app/assets/stylesheets/objects/README.md'
-2. Bourbon Neat overview - the 'pugin/app/assets/stylesheets/objects/BOURBON-NEAT-GRID.md'
+2. Bourbon Neat overview - 'pugin/app/assets/stylesheets/objects/BOURBON-NEAT-GRID.md'
 
 ## Style Guide Layouts
 
