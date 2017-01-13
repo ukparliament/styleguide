@@ -49,11 +49,9 @@
   .sg-markup
     pre
       code.language-markup
-        script
-          .video-wrap
-            iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube-nocookie.com/embed/0p3-v0rp1rc" width="640"
-
-
+        //script
+        = ukp_render_source 'styleguide/elements/partials/media/youtube'
+        
 - content_for :notes3 do
   // Optional
   h2 Audio
