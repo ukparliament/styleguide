@@ -10,6 +10,8 @@ html lang="en"
     link rel="stylesheet" href="/_css/application.css"
 
   body.no-js
+    = content_for?(:global_msg) ? yield(:global_msg) : render('styleguide/_shared/global_msg')
+
     = content_for?(:body_header) ? yield(:body_header) : render('layouts/pugin/modules/header')
 
     .c-fg
