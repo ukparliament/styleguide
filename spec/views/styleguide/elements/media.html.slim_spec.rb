@@ -18,6 +18,7 @@ RSpec.describe "styleguide/elements/media.html.slim", type: :view do
     it "rendered page partials" do
       expect(response.body).to render_template(partial: "_video")
       expect(response.body).to render_template(partial: "_audio")
+      expect(response.body).to render_template(partial: "_youtube")
     end
 
     it "rendered view includes '#WordorPhrase'" do
