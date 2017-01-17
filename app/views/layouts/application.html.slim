@@ -15,11 +15,13 @@ html lang="en"
     = content_for?(:body_header) ? yield(:body_header) : render('layouts/pugin/modules/header')
 
     .c-fg
+      = content_for?(:phase_banner) ? yield(:phase_banner) : render('styleguide/_shared/phase_banner')
+
       = content_for?(:body_hr_nav) ? yield(:body_hr_nav) : ''
 
       = content_for?(:body_main) ? yield(:body_main) : render('layouts/body')
 
-      = content_for?(:body_footer) ? yield(:body_footer) : render('layouts/pugin/modules/footer')
+    = content_for?(:body_footer) ? yield(:body_footer) : render('layouts/pugin/modules/footer')
 
     = "\n"
     script src="/_js/vendor.js"
