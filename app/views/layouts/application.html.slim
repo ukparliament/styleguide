@@ -6,18 +6,22 @@ html lang="en"
     meta content="ie=edge" http-equiv="X-UA-Compatible"
     title = content_for?(:head_title) ? yield(:head_title) : "UK Parliament Style Guide"
     link href="/_img/pugin/favicon.ico" rel="shortcut icon" type="image/x-icon"
-    // if css fails, run this command from the root dir "make build -C pugin"
+    / if css fails, run this command from the root dir "make build -C pugin TASK=css"
     link rel="stylesheet" href="/_css/application.css"
 
   body.no-js
+    = content_for?(:global_msg) ? yield(:global_msg) : render('styleguide/_shared/global_msg')
+
     = content_for?(:body_header) ? yield(:body_header) : render('layouts/pugin/modules/header')
 
     .c-fg
+      = content_for?(:phase_banner) ? yield(:phase_banner) : render('styleguide/_shared/phase_banner')
+
       = content_for?(:body_hr_nav) ? yield(:body_hr_nav) : ''
 
       = content_for?(:body_main) ? yield(:body_main) : render('layouts/body')
 
-      = content_for?(:body_footer) ? yield(:body_footer) : render('layouts/pugin/modules/footer')
+    = content_for?(:body_footer) ? yield(:body_footer) : render('layouts/pugin/modules/footer')
 
     = "\n"
     script src="/_js/vendor.js"
