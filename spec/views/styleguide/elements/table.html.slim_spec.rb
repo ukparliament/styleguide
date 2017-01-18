@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "styleguide/elements/table.html.slim", type: :view do
 
-  describe "GET #a-z" do
+  describe "GET table" do
     before(:each) do
       # you'll need to specify both the template and the layout explicitly
       render template: 'styleguide/elements/table', layout: 'layouts/sub_layout'
