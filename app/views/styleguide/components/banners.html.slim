@@ -1,0 +1,85 @@
+- content_for :head_title do
+  // Required, title used for page and SEO
+  | Components - Banners
+
+- content_for :body_header do
+  // Optional, a fallback header will be applied
+
+- content_for :body_hr_nav do
+  // Optional
+  = render 'layouts/nav_hr'
+
+- content_for :page_heading do
+  // Required for page heading and SEO
+  h1 Banners
+
+- content_for :notes do
+  // Optional
+
+- content_for :notes1 do
+  h2 Sitewide banner
+- content_for :preview1 do
+  h3 Preview
+  .sg-preview
+    = PUGIN.get_component('modules/global_msg', { \
+        status: "on", \
+        class: "", \
+        content: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." \
+      })
+- content_for :markup1 do
+  // Required if displaying the markup or api call, otherwise optional
+  h3 API Call
+  .sg-markup
+    pre
+      code.language-ruby
+        | = PUGIN.get_component('modules/global_msg', { \
+              status: "on", \
+              class: "", \
+              content: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." \
+            })
+
+  h3 HTML Markup
+  .sg-markup
+    pre
+      code.language-markup
+        = ukp_render_source 'styleguide/_shared/global_msg'
+
+- content_for :notes2 do
+  h2 Better banners
+- content_for :preview2 do
+  h3 Preview
+  .sg-preview
+    = PUGIN.get_component('modules/phase_banner', { \
+        status: "on", \
+        title: "beta", \
+        content: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." \
+      })
+
+- content_for :markup2 do
+  // Required if displaying the markup or api call, otherwise optional
+  h3 API Call
+  .sg-markup
+    pre
+      code.language-ruby
+        | = PUGIN.get_component('modules/phase_banner', { \
+              status: "on", \
+              title: "beta", \
+              content: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." \
+            })
+
+  h3 HTML Markup
+  .sg-markup
+    pre
+      code.language-markup
+        = ukp_render_source 'styleguide/_shared/phase_banner'
+
+- content_for :feedback do
+  // Required if displaying a style, otherwise optional
+  = render 'styleguide/_shared/feedback'
+
+- content_for :nav_vr_section do
+  // Required for sectioned pages (design, components, etc) - optional for others
+  = render 'layouts/nav_vr_components'
+
+- content_for :body_footer do
+  // Optional, a fallback footer will be applied
