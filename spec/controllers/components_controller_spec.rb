@@ -38,6 +38,18 @@ RSpec.describe ComponentsController, type: :controller do
     end
   end
 
+  describe "GET banners" do
+    before(:each) do
+      get :banners
+    end
+    it "returns http success" do
+      expect(response).to have_http_status(:success)
+    end
+    it "rendered using the correct template" do
+      expect(response).to render_template("styleguide/components/banners")
+    end
+  end
+
   describe "GET breadcrumb" do
     before(:each) do
       get :breadcrumb
