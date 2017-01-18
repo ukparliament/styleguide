@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "styleguide/elements/lists.html.slim", type: :view do
 
-  describe "GET #a-z" do
+  describe "GET lists" do
     before(:each) do
       # you'll need to specify both the template and the layout explicitly
       render template: 'styleguide/elements/lists', layout: 'layouts/sub_layout'
