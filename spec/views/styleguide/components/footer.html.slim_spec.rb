@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "styleguide/components/footer.html.slim", type: :view do
 
-  describe "GET #a-z" do
+  describe "GET #footer" do
     before(:each) do
       # you'll need to specify both the template and the layout explicitly
       render template: 'styleguide/components/footer', layout: 'layouts/sub_layout'
