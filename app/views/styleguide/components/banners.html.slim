@@ -35,24 +35,24 @@
         | = PUGIN.get_component('modules/global_msg', { \
               status: "on", \
               class: "", \
-              content: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." \
+              content: "This is a site wide banner" \
             })
 
   h3 HTML Markup
   .sg-markup
     pre
       code.language-markup
-        = ukp_render_source 'styleguide/_shared/global_msg'
+        = ukp_render_source 'styleguide/components/partials/global_msg'
 
 - content_for :notes2 do
   h2 Better banners
 - content_for :preview2 do
   h3 Preview
   .sg-preview
-    = PUGIN.get_component('modules/phase_banner', { \
+    = PUGIN.get_component('modules/global_msg', { \
         status: "on", \
         title: "beta", \
-        content: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." \
+        content: "This is a site wide banner." \
       })
 
 - content_for :markup2 do
@@ -64,14 +64,14 @@
         | = PUGIN.get_component('modules/phase_banner', { \
               status: "on", \
               title: "beta", \
-              content: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." \
+              content: "This is a BETA banner." \
             })
 
   h3 HTML Markup
   .sg-markup
     pre
       code.language-markup
-        = ukp_render_source 'styleguide/_shared/phase_banner'
+        = ukp_render_source 'styleguide/components/partials/phase_banner'
 
 - content_for :feedback do
   // Required if displaying a style, otherwise optional
