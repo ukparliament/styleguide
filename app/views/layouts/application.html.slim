@@ -21,7 +21,7 @@ html lang="en"
 
       = content_for?(:body_main) ? yield(:body_main) : render('layouts/body')
 
-    = content_for?(:body_footer) ? yield(:body_footer) : render('layouts/pugin/modules/footer')
+      = content_for?(:body_footer) ? yield(:body_footer) : render('layouts/pugin/modules/footer')
 
     = "\n"
     script src="/_js/vendor.js"
