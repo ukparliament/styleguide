@@ -15,11 +15,18 @@ RUN mkdir -p $RAILS_ROOT
 COPY . $RAILS_ROOT
 RUN chown -R $APP_USER:$APP_USER $RAILS_ROOT
 
+# git submodule
+RUN cd $RAILS_ROOT && git submodule init
+RUN cd $RAILS_ROOT && git submodule update --remote
+
 # cache the gems
 COPY Gemfile $RAILS_ROOT/Gemfile
 COPY Gemfile.lock $RAILS_ROOT/Gemfile.lock
 RUN cd $RAILS_ROOT && env NOKOGIRI_USE_SYSTEM_LIBRARIES=true bundle install \
   	&& chown -R $APP_USER:$APP_USER $GEM_HOME
+
+# nodejs
+RUN cd $RAILS_ROOT && apt-get update && apt-get install -y nodejs && apt-get install -y npm
 
 USER $USER
 WORKDIR $RAILS_ROOT
