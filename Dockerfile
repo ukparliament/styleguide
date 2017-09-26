@@ -2,6 +2,8 @@ FROM ruby:2.3.1
 
 ENV APP_USER parliament
 
+RUN apt-get update && apt-get -y upgrade
+
 # create user to run app in user space
 RUN set -x \
         && groupadd -g 5000 $APP_USER \
